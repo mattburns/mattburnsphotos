@@ -7,6 +7,8 @@
 	textColor="FFFFFF"
 	frameColor="FFFFFF"
 	frameWidth="20"
+	maxImageWidth="1024"
+	maxImageHeight="1024"
 	thumbPosition="LEFT"
 	thumbColumns="3"
 	thumbRows="4"
