@@ -10,8 +10,9 @@
 			var params = {};
 			params.allowfullscreen = true;
 			params.allowscriptaccess = "always";
-			params.bgcolor = "222222";
-			swfobject.embedSWF("../simpleviewer.swf", "flashContent", "100%", "600", "9.0.124", false, flashvars, params);
+			params.bgcolor = "222";
+			params.wmode="transparent";
+			swfobject.embedSWF("../simpleviewer.swf", "flashContent", "100%", "90%", "9.0.124", false, flashvars, params);
 		</script>
 		
 		<style type="text/css" media="screen">	
@@ -27,29 +28,32 @@
 			}
 			
 			a {	
-				color:#ff0000;	
+				color:#ccc;	
+			}
+			
+			img.key {
+				position:absolute;
+				left:50px;
+				top:10px;
+				z-index:1;
+				border:0px;
 			}
 			
 			#header {
-				//text-align: center;
-				margin-left: 30px;
 				background-color: #fffff;
 				color:#FFFFFF;
 				width: 100%;
-				height: 20px;
 				padding: 10px 0 10px 0;
 			}
 
 			#footer {
 				text-align: center;
-				background-color: #222222;
-				color:#FFFFFF;
+				font-size:10px;
+				color:#444;
 				width: 100%;
-				height: 20px;
 				padding: 10px 0 10px 0;
 			}
 
-			
 			#flashcontent {
 				width: 100%;
 				height: 600px;
@@ -58,7 +62,10 @@
 		
 	</head><body>
 	<div id="header" >
-		<a href="mattburnsphotos.com"/>mattBurnsPhotos</a>
+		<a href="http://www.mattburnsphotos.com"><img class="key" src="../../mattburnsphotos.jpg" /></a>
 	</div>
 	<div id="flashContent"><a href="http://get.adobe.com/flashplayer/">Get Flash</a> or "Allow Blocked Content"</div></body>
+	<div id="footer" >
+		<a href="http://www.mattburnsphotos.com"/>order prints</a> | &copy;2010 matt burns
+	</div>
 </html>
