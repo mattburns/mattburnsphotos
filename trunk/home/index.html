@@ -44,29 +44,6 @@
 				font-weight:bold; 
 				font:10pt "Lucida Grande", Arial, sans-serif; 
 			}
-				
-			.boxcaption{ 
-				float: left; 
-				position: absolute; 
-				background: #000; 
-				height: 100px; 
-				width: 100%; 
-				opacity: .8; 
-				/* For IE 5-7 */
-				filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
-				/* For IE 8 */
-				-MS-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
- 			}
-			
-			.captionfull .boxcaption {
-				top: 260;
-				left: 0;
-			}
-			
-			.caption .boxcaption {
-				top: 220;
-				left: 0;
-			}
 			
 			.cover {
 				top: 20;
@@ -87,7 +64,11 @@
 				}, function() {
 					$(".cover", this).stop().animate({top:'50px'},{queue:false,duration:300});
 				});
-				//Vertical Sliding
+				$('.boxgrid.slidedownpart').hover(function(){
+					$(".cover", this).stop().animate({top:'200px'},{queue:false,duration:300});
+				}, function() {
+					$(".cover", this).stop().animate({top:'50px'},{queue:false,duration:300});
+				});
 				$('.boxgrid.slideup').hover(function(){
 					$(".cover", this).stop().animate({top:'-150px'},{queue:false,duration:300});
 				}, function() {
@@ -99,13 +80,11 @@
 				}, function() {
 					$(".cover", this).stop().animate({left:'0px'},{queue:false,duration:300});
 				});
-				//Horizontal Sliding
 				$('.boxgrid.sliderightpart').hover(function(){
 					$(".cover", this).stop().animate({left:'325px'},{queue:false,duration:300});
 				}, function() {
 					$(".cover", this).stop().animate({left:'0px'},{queue:false,duration:300});
 				});
-				//Horizontal Sliding
 				$('.boxgrid.slideleft').hover(function(){
 					$(".cover", this).stop().animate({left:'-450px'},{queue:false,duration:300});
 				}, function() {
@@ -117,29 +96,10 @@
 				}, function() {
 					$(".cover", this).stop().animate({top:'50px', left:'0px'},{queue:false,duration:300});
 				});
-				//Diagnal Sliding
 				$('.boxgrid.slidetaxi').hover(function(){
 					$(".cover", this).stop().animate({top:'200px', left:'450px'},{queue:false,duration:300});
 				}, function() {
 					$(".cover", this).stop().animate({top:'50px', left:'0px'},{queue:false,duration:300});
-				});
-				//Partial Sliding (Only show some of background)
-				$('.boxgrid.peek').hover(function(){
-					$(".cover", this).stop().animate({top:'90px'},{queue:false,duration:160});
-				}, function() {
-					$(".cover", this).stop().animate({top:'0px'},{queue:false,duration:160});
-				});
-				//Full Caption Sliding (Hidden to Visible)
-				$('.boxgrid.captionfull').hover(function(){
-					$(".cover", this).stop().animate({top:'160px'},{queue:false,duration:160});
-				}, function() {
-					$(".cover", this).stop().animate({top:'260px'},{queue:false,duration:160});
-				});
-				//Caption Sliding (Partially Hidden to Visible)
-				$('.boxgrid.caption').hover(function(){
-					$(".cover", this).stop().animate({top:'160px'},{queue:false,duration:160});
-				}, function() {
-					$(".cover", this).stop().animate({top:'50px'},{queue:false,duration:160});
 				});
 			});
 		</script>
@@ -158,7 +118,7 @@
 			<img class="cover leavetop" src="taxi.jpg"/>
 		</div>
 		
-		<div class="boxgrid caption">
+		<div class="boxgrid slidedownpart">
 			<img class="cover" src="baby.jpg"/>
 			<h3>Babies & Families</h3>
 			<p>I love taking photos of families, it's always good fun and totally unpredictable.
