@@ -22,23 +22,25 @@
 				height: 300px; 
 				margin:20px; 
 				float:left; 
-				background:#161613; 
+				background:#000; 
 				border: solid 10px #fff; 
 				overflow: hidden; 
 				position: relative; 
 			}
-				.boxgrid img{ 
-					position: absolute; 
-					top: 0; 
-					left: 0; 
-					border: 0; 
-				}
-				.boxgrid p{ 
-					padding: 0 10px; 
-					color:#afafaf; 
-					font-weight:bold; 
-					font:10pt "Lucida Grande", Arial, sans-serif; 
-				}
+			
+			.boxgrid img{ 
+				position: absolute; 
+				top: 50; 
+				left: 0; 
+				border: 0; 
+			}
+			
+			.boxgrid p{ 
+				padding: 0 10px; 
+				color:#afafaf; 
+				font-weight:bold; 
+				font:10pt "Lucida Grande", Arial, sans-serif; 
+			}
 				
 			.boxcaption{ 
 				float: left; 
@@ -75,31 +77,43 @@
 				//To switch directions up/down and left/right just place a "-" in front of the top/left attribute
 				//Vertical Sliding
 				$('.boxgrid.slidedown').hover(function(){
-					$(".cover", this).stop().animate({top:'-260px'},{queue:false,duration:300});
+					$(".cover", this).stop().animate({top:'300px'},{queue:false,duration:300});
+				}, function() {
+					$(".cover", this).stop().animate({top:'50px'},{queue:false,duration:300});
+				});
+				//Vertical Sliding
+				$('.boxgrid.slideup').hover(function(){
+					$(".cover", this).stop().animate({top:'-150px'},{queue:false,duration:300});
 				}, function() {
 					$(".cover", this).stop().animate({top:'50px'},{queue:false,duration:300});
 				});
 				//Horizontal Sliding
 				$('.boxgrid.slideright').hover(function(){
-					$(".cover", this).stop().animate({top:'50px', left:'325px'},{queue:false,duration:300});
+					$(".cover", this).stop().animate({left:'450px'},{queue:false,duration:300});
 				}, function() {
-					$(".cover", this).stop().animate({top:'50px', left:'0px'},{queue:false,duration:300});
+					$(".cover", this).stop().animate({left:'0px'},{queue:false,duration:300});
 				});
 				//Horizontal Sliding
-				$('.boxgrid.sliderightfull').hover(function(){
+				$('.boxgrid.sliderightpart').hover(function(){
 					$(".cover", this).stop().animate({left:'325px'},{queue:false,duration:300});
 				}, function() {
 					$(".cover", this).stop().animate({left:'0px'},{queue:false,duration:300});
 				});
 				//Horizontal Sliding
 				$('.boxgrid.slideleft').hover(function(){
-					$(".cover", this).stop().animate({top:'50px', left:'-450px'},{queue:false,duration:300});
+					$(".cover", this).stop().animate({left:'-450px'},{queue:false,duration:300});
 				}, function() {
-					$(".cover", this).stop().animate({top:'50px', left:'0px'},{queue:false,duration:300});
+					$(".cover", this).stop().animate({left:'0px'},{queue:false,duration:300});
 				});
 				//Diagnal Sliding
 				$('.boxgrid.slidedownright').hover(function(){
 					$(".cover", this).stop().animate({top:'300px', left:'450px'},{queue:false,duration:300});
+				}, function() {
+					$(".cover", this).stop().animate({top:'50px', left:'0px'},{queue:false,duration:300});
+				});
+				//Diagnal Sliding
+				$('.boxgrid.slidetaxi').hover(function(){
+					$(".cover", this).stop().animate({top:'200px', left:'450px'},{queue:false,duration:300});
 				}, function() {
 					$(".cover", this).stop().animate({top:'50px', left:'0px'},{queue:false,duration:300});
 				});
@@ -133,10 +147,10 @@
 	
 	</div>
 				
-		<div class="boxgrid slidedownright">
+		<div class="boxgrid slidetaxi">
 			<h3>Portfolio</h3>
 			<p>here</p>
-			<img class="cover" src="feet.jpg"/>
+			<img class="cover leavetop" src="taxi.jpg"/>
 		</div>
 		
 		<div class="boxgrid caption">
@@ -154,7 +168,7 @@
 			<p>Serious or quirky</p>
 		</div>
 
-		<div class="boxgrid slideleft">
+		<div class="boxgrid slidedown">
 			<h3>Client Area</h3>
 			<p><a href="http://www.mattburns.co.uk/clientalbums/grice/">The Grice Family</a></p>
 			<img class="cover" src="feet.jpg"/>
@@ -163,10 +177,10 @@
 		<div class="boxgrid slidedownright">
 			<h3>Prices</h3>
 			<p>1 hour photo session - Free</p>
-			<img class="cover" src="feet.jpg"/>
+			<img class="cover" src="mic.jpg"/>
 		</div>		
 		
-		<div class="boxgrid sliderightfull">
+		<div class="boxgrid sliderightpart">
 			<img class="cover" src="wedding.jpg"/>
 			<h3>Info</h3>
 			<p>Bristol-based. All commissions considered</p>
