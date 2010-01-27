@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+	<head>
+		<title>Grice</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"></script>
+		<script type="text/javascript">
+			var flashvars = {};
+			flashvars.galleryURL = "gallery.xml";
+			var params = {};
+			params.allowfullscreen = true;
+			params.allowscriptaccess = "always";
+			params.bgcolor = "222";
+			params.wmode="transparent";
+			swfobject.embedSWF("../simpleviewer.swf", "flashContent", "100%", "90%", "9.0.124", false, flashvars, params);
+		</script>
+		
+		<style type="text/css" media="screen">	
+			html, body	{ height:100%; }
+			body {			
+				margin:0;
+				padding:0;
+				overflow:auto;
+				background-color: #222;
+				color:#666;
+				font-family:sans-serif;
+				font-size:20px;		
+			}
+			
+			a {	
+				color:#ccc;	
+			}
+			
+			img.key {
+				position:absolute;
+				left:10px;
+				top:10px;
+				z-index:1;
+				border:0px;
+			}
+			
+			#header {
+				background-color: #fffff;
+				color:#FFFFFF;
+				width: 100%;
+				padding: 10px 0 10px 0;
+			}
+
+			#footer {
+				text-align: center;
+				font:10pt "Lucida Grande", Arial, sans-serif;
+				color:#999;
+				width: 100%;
+				padding: 10px 0 10px 0;
+			}
+
+			#flashcontent {
+				width: 100%;
+			}
+			
+			#noflash {
+				margin: 100px 0px 0px 10px;
+			}
+		</style>
+		
+	</head><body>
+	<div id="header" >
+		<a href="../../index.html"><img class="key" src="../../images/mattburnsphotos.jpg" /></a>
+	</div>
+	<div id="flashContent">
+	<div id="noflash">
+	This page requires <a href="http://get.adobe.com/flashplayer/">Flash</a>.
+	</div>
+	</div>
+	
+	<div id="footer" >
+		<a href="http://www.mattburnsphotos.com"/>order big, high quality prints</a> | &copy;2010 matt burns
+	</div>
+	</body>
+</html>
