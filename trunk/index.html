@@ -10,15 +10,26 @@
 				max-width: 1600px; // investigate IE way...
 			}
 			a{ color:#fff;}
-			h3{ margin: 5 5 5 10; color:#DDD; font:28pt Arial, sans-serif; letter-spacing:-1px; font-weight: bold;  }
-			h4{ margin: 5 5 5 10; color:#DDD; font:12pt Arial, sans-serif; letter-spacing:-1px;   }
+			h3{ margin: 5 5 5 10; color:#DDD; font:28pt Georgia, serif; letter-spacing:-1px; }
+			h4{ margin: 5 5 5 10; color:#DDD; font:12pt Georgia, serif; letter-spacing:-1px; }
 			
-			.logo{ 
-				margin:10px;
+			.logo{
+				height:90px;
+				margin:10 0 5 20;
 				background:#222222; 
-				border: solid 0px #8399AF; 
+				border: 0px; 
 				overflow: hidden; 
 				position: relative; 
+				letter-spacing:-2px;
+				font:60pt Georgia, serif;
+			}
+			
+			.logogrey{ 
+				color:#DDD;
+				
+			}
+			.logogreen{ 
+				color:#41A62A;
 			}
 			
 			.boxgrid{ 
@@ -67,7 +78,7 @@
 		<script src="javascript/cufon-yui.js" type="text/javascript"></script>
 		<script src="javascript/Tallys_400.font.js" type="text/javascript"></script>
 		<script type="text/javascript">
-			Cufon.replace('h3', { fontFamily: 'Tallys' });
+			Cufon.replace('.logo, h3', { fontFamily: 'Tallys' });
 		</script>
 
 		<script type="text/javascript" src="javascript/jquery-1.4.1.min.js"></script>
@@ -124,7 +135,7 @@
 	</head>
 	<body>
 		<div class="logo">
-			<a href="index.html"><img class="logo" src="images/mattburnsphotos.jpg"/></a>
+			<a href="index.html"><span class="logogrey">matt</span><span class="logogreen">burns</span><span class="logogrey">photos</span></a>
 		</div>
 				
 		<div class="boxgrid slidetaxi">
