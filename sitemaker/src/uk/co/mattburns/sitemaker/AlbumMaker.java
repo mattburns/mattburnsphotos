@@ -56,11 +56,11 @@ public class AlbumMaker {
 			}
 		}
 
+		makeHtml(albumName, albumDir, sourcePhotos);
 		makeThumbs(albumDir, sourcePhotos);
 		makeMediumPhotos(albumDir, sourcePhotos);
-		makeHtml(albumName, albumDir, sourcePhotos);
 
-		System.out.println("Finished :)");
+		System.out.println("Finished " + albumName + " album :)");
 	}
 
 	private void makeHtml(String albumName, File albumDir, List<File> sourcePhotos) throws IOException {
