@@ -23,7 +23,8 @@ public class AlbumMaker {
 	private static final File IMAGES_DIR = new File("C:/svnrepos/mattburnsphotos/images");
 	private static final File JAVASCRIPT_DIR = new File("C:/svnrepos/mattburnsphotos/javascript");
 	private static final File CSS_DIR = new File("C:/svnrepos/mattburnsphotos/css");
-	private static final File TEMPLATE_HTML = new File("C:/svnrepos/mattburnsphotos/sitemaker/templates/index.html");
+	private static final File TEMPLATE_HTML = new File("C:/svnrepos/mattburnsphotos/sitemaker/templates/album.html");
+	private static final File HOME_HTML = new File("C:/svnrepos/mattburnsphotos/index.html");
 
 	public static void main(String[] args) throws IOException {
 
@@ -41,9 +42,10 @@ public class AlbumMaker {
 
 	public AlbumMaker(String albumName, File photoSourceDirectory) throws IOException {
 		GENERATED_DIR.mkdirs();
-		copyDirectory(CSS_DIR, new File(GENERATED_DIR, "css"));
-		copyDirectory(IMAGES_DIR, new File(GENERATED_DIR, "images"));
-		copyDirectory(JAVASCRIPT_DIR, new File(GENERATED_DIR, "javascript"));
+		copyFile(CSS_DIR, new File(GENERATED_DIR, "css"));
+		copyFile(IMAGES_DIR, new File(GENERATED_DIR, "images"));
+		copyFile(JAVASCRIPT_DIR, new File(GENERATED_DIR, "javascript"));
+		copyFile(HOME_HTML, new File(GENERATED_DIR, "index.html"));
 
 		File clientAlbumsDirectory = new File(GENERATED_DIR, "clients");
 
@@ -152,7 +154,7 @@ public class AlbumMaker {
 	}
 	
     // If targetLocation does not exist, it will be created.
-    public void copyDirectory(File sourceLocation , File targetLocation)
+    public void copyFile(File sourceLocation , File targetLocation)
     throws IOException {
     	if (sourceLocation.getName().equals(".svn") ){
     		return;
@@ -165,7 +167,7 @@ public class AlbumMaker {
             
             String[] children = sourceLocation.list();
             for (int i=0; i<children.length; i++) {
-                copyDirectory(new File(sourceLocation, children[i]),
+                copyFile(new File(sourceLocation, children[i]),
                         new File(targetLocation, children[i]));
             }
         } else {
