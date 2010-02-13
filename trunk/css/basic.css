@@ -5,12 +5,13 @@ html, body {
 body{
 	text-align: center;
 	font-family: "Lucida Grande", "Lucida Sans Unicode", Verdana, Helvetica, Arial, sans-serif;
-	background-color: #222;
+	background-color: #444;
 	color: #444;
 	font-size: 75%;
 }
 a{
-	color: #27D;
+	cursor: pointer;
+	color: #666;
 	text-decoration: none;
 }
 a:focus, a:hover, a:active {
@@ -21,17 +22,22 @@ p, li {
 }
 h1, h2 {
 	font-family: "Trebuchet MS", Verdana, sans-serif;
-	margin: 0 0 10px 0;
+	margin: 0;
 	letter-spacing:-1px;
+	color: #333;
 }
 h1 {
 	padding: 0;
 	font-size: 3em;
-	color: #333;
+	width: 500px;
+	float:left;
 }
 h2 {
 	padding-top: 10px;
-	font-size:2em;
+	font-size:3em;
+	width: 500px;
+	float:left;
+	text-align: left;
 }
 pre {
 	font-size: 1.2em;
@@ -39,7 +45,7 @@ pre {
 	overflow-x: auto;
 }
 div#page {
-	width: 1100px;
+	width: 900px;
 	background-color: #222;
 	margin: 0 auto;
 	text-align: left;
@@ -61,3 +67,24 @@ div#footer {
 	padding: 20px 0 40px;
 	text-align: center;
 }
+ul.menu {
+	float: right;
+	margin: 0;
+	padding: 0;
+}
+ul.menu li {
+	float: right;
+	margin:.5em;
+	list-style: none;
+}
+ul.menu:hover li:hover{
+	text-decoration: underline;
+}
+.menuselected {
+	color: #999;
+	cursor: none;
+}
+.menuselected:hover {
+	text-decoration: none;
+}
+
