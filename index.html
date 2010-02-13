@@ -1,189 +1,63 @@
 <html>
 	<head>
-		<title>mattburnsphotos</title>
-		
-		<style type="text/css">
-		
-			*{ padding:0px; margin:0px; }
-			body{
-				background:#222222;
-				max-width: 1600px; // investigate IE way...
-			}
-			a{ color:#fff;}
-			h3{ margin: 5 5 5 10; color:#DDD; font:28pt Georgia, serif; letter-spacing:-1px; }
-			h4{ margin: 5 5 5 10; color:#DDD; font:12pt Georgia, serif; letter-spacing:-1px; }
-			
-			.logo{
-				height:90px;
-				margin:10 0 5 20;
-				background:#222222; 
-				border: 0px; 
-				overflow: hidden; 
-				position: relative; 
-				letter-spacing:-2px;
-				font:60pt Georgia, serif;
-			}
-			
-			.logogrey{ 
-				color:#DDD;
-				
-			}
-			.logogreen{ 
-				color:#41A62A;
-			}
-			
-			.boxgrid{ 
-				width: 400px; 
-				height: 300px; 
-				margin:20px; 
-				float:left; 
-				background:#222; 
-				border: solid 10px #fff; 
-				overflow: hidden; 
-				position: relative; 
-			}
-			
-			.boxgrid img{ 
-				position: absolute; 
-				top: 50; 
-				left: 0; 
-				border: 0; 
-			}
-			
-			.boxgrid p{ 
-				padding: 0 10px; 
-				color:#afafaf; 
-				font-weight:bold; 
-				font:10pt "Lucida Grande", Arial, sans-serif; 
-			}
-			
-			.cover {
-				top: 20;
-				left: 0;
-			}
-				
-			h3 a{}
-			#footer {
-				clear:both;
-				text-align: center;
-				font:10pt "Lucida Grande", Arial, sans-serif;
-				color:#999;
-				width: 100%;
-				padding: 10px 0 10px 0;
-			}
-
-				
-		</style>
-				
-		<script src="javascript/cufon-yui.js" type="text/javascript"></script>
-		<script src="javascript/Tallys_400.font.js" type="text/javascript"></script>
-		<script type="text/javascript">
-			Cufon.replace('.logo, h3', { fontFamily: 'Tallys' });
-		</script>
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+		<title>mattburnsphotos | albumNameTag</title>
+		<link rel="stylesheet" href="css/basic.css" type="text/css" />
 
 		<script type="text/javascript" src="javascript/jquery-1.4.1.min.js"></script>
+		<script type="text/javascript" src="javascript/jquery.flow.1.1.min.js"></script>
+
 		<script type="text/javascript">
-			$(document).ready(function(){
-				//To switch directions up/down and left/right just place a "-" in front of the top/left attribute
-				//Vertical Sliding
-				$('.boxgrid.slidedown').hover(function(){
-					$(".cover", this).stop().animate({top:'300px'},{queue:false,duration:300});
-				}, function() {
-					$(".cover", this).stop().animate({top:'50px'},{queue:false,duration:300});
-				});
-				$('.boxgrid.slidedownpart').hover(function(){
-					$(".cover", this).stop().animate({top:'200px'},{queue:false,duration:300});
-				}, function() {
-					$(".cover", this).stop().animate({top:'50px'},{queue:false,duration:300});
-				});
-				$('.boxgrid.slideup').hover(function(){
-					$(".cover", this).stop().animate({top:'-150px'},{queue:false,duration:300});
-				}, function() {
-					$(".cover", this).stop().animate({top:'50px'},{queue:false,duration:300});
-				});
-				//Horizontal Sliding
-				$('.boxgrid.slideright').hover(function(){
-					$(".cover", this).stop().animate({left:'450px'},{queue:false,duration:300});
-				}, function() {
-					$(".cover", this).stop().animate({left:'0px'},{queue:false,duration:300});
-				});
-				$('.boxgrid.sliderightpart').hover(function(){
-					$(".cover", this).stop().animate({left:'325px'},{queue:false,duration:300});
-				}, function() {
-					$(".cover", this).stop().animate({left:'0px'},{queue:false,duration:300});
-				});
-				$('.boxgrid.slideleft').hover(function(){
-					$(".cover", this).stop().animate({left:'-450px'},{queue:false,duration:300});
-				}, function() {
-					$(".cover", this).stop().animate({left:'0px'},{queue:false,duration:300});
-				});
-				//Diagnal Sliding
-				$('.boxgrid.slidedownright').hover(function(){
-					$(".cover", this).stop().animate({top:'300px', left:'450px'},{queue:false,duration:300});
-				}, function() {
-					$(".cover", this).stop().animate({top:'50px', left:'0px'},{queue:false,duration:300});
-				});
-				$('.boxgrid.slidetaxi').hover(function(){
-					$(".cover", this).stop().animate({top:'200px', left:'450px'},{queue:false,duration:300});
-				}, function() {
-					$(".cover", this).stop().animate({top:'50px', left:'0px'},{queue:false,duration:300});
-				});
+		$(function() {
+			$("div#controller").jFlow({
+				slides: "#slides",
+				width: "830px",
+				height: "554px"
 			});
+		});
 		</script>
 
-		
 	</head>
 	<body>
-		<div class="logo">
-			<a href="index.html"><span class="logogrey">matt</span><span class="logogreen">burns</span><span class="logogrey">photos</span></a>
-		</div>
-				
-		<div class="boxgrid slidetaxi">
-			<h3>portfolio</h3>
-			<p>here</p>
-			<img class="cover leavetop" src="images/taxi.jpg"/>
-		</div>
-		
-		<div class="boxgrid slidedownpart">
-			<img class="cover" src="images/baby.jpg"/>
-			<h3>families</h3>
-			<p>I love taking photos of families, it's always good fun and totally unpredictable.
-			If you want some beautiful pictures of your little angels, or some original photos of your bunch of monkeys, get in touch.</p>
-			<br/>
-			<p>Take a look at <a href="clients/grice/index.html">this recent album</a> for an example of what you can expect</p>
-		</div>
-		
-		<div class="boxgrid slideright">
-			<img class="cover" src="images/portrait.jpg"/>
-			<h3>portraits</h3>
-			<p>Serious or quirky</p>
-		</div>
+		<div id="page">
+			<div id="container">
+				<h1><img src="images/mattburnsphotos.jpg"/></h1>
+				<div>
+					<ul class="menu">
+						<li><a href="contact.html">contact</a></li>
+						<li>|</li>
+						<li><a href="prices.html">prices</a></li>
+						<li>|</li>
+						<li><a href="portfolio.html">portfolio</a></li>
+						<li>|</li>
+						<li><a class="menuselected" href="index.html">home</a></li>
+					</ul>
+				</div>
+				<div id="wrap">
 
-		<div class="boxgrid slidedown">
-			<h3>client area</h3>
-			<p><a href="clients/grice/index.html">The Grice Family</a></p>
-			<img class="cover" src="images/feet.jpg"/>
+					<div id="controller" class="hidden">
+						<span class="jFlowControl">No 1</span>
+						<span class="jFlowControl">No 2</span>
+						<span class="jFlowControl">No 3</span>
+						<span class="jFlowControl">No 4</span>
+						<span class="jFlowControl">No 5</span>
+					</div>
+					
+					<div id="prevNext">
+						<img src="images/leftarrow.png" alt="Previous Tab" class="jFlowPrev" />
+						<img src="images/rightarrow.png" alt="Next Tab" class="jFlowNext" />
+					</div>
+					
+					<div id="slides">
+						<div><img src="images/1.jpg" alt="photo" /><p>Bristol-based photographer specialising in family portraits</p></div>
+						<div><img src="images/2.jpg" alt="photo" /><p>Pricing that is clear, honest and affordable</p></div>
+						<div><img src="images/3.jpg" alt="photo" /><p>Highest possible quality photographs and editing</p></div>
+						<div><img src="images/4.jpg" alt="photo" /><p>The photo session is free because I know you'll love them</p></div>
+						<div><img src="images/5.jpg" alt="photo" /><p>No family member is forgotten ;)</p></div>
+					</div>
+					
+				</div>
+			</div>
 		</div>
-		
-		<div class="boxgrid slidedownright">
-			<h3>prices</h3>
-			<p>1 hour photo session - Free</p>
-			<img class="cover" src="images/mic.jpg"/>
-		</div>		
-		
-		<div class="boxgrid sliderightpart">
-			<img class="cover" src="images/wedding.jpg"/>
-			<h3>info</h3>
-			<p>Bristol-based. All commissions considered</p><br/>
-			<h4>email</h4>
-			<p>matt@mattburns.co.uk</p>
-			<h4>call</h4>
-			<p>07762 784444</p>
-		</div>
-		
-		<div id="footer" >
-			<a href="http://www.mattburnsphotos.com"/>order big, high quality prints</a> | &copy;2010 matt burns
-		</div>
-
 	</body>
 </html>

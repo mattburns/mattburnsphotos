@@ -100,8 +100,8 @@ display: none;
 
 #prevNext
 {
-margin: 320px 30px -300px 30px;
-min-width: 300px;
+margin: 120px 0px -103px 60px;
+min-width:300px;
 }
 #jFlowSlide{
 border: 15px solid #eee;
@@ -115,18 +115,18 @@ cursor: pointer;
 }
 
 .jFlowNext {
-float:right;
+margin-left:570px;
 }
 
 #slides p
 {
-margin: 0;
-padding: 0 1em;
+margin: 0px 0px 0px 0px;
+padding: 0px 0px 0px 130px;
 font-size: 1.5em;
 position: relative;
-top: -50px;
-line-height: 50px;
-height: 50px;
+top: -554px;
+line-height: 100px;
+height: 100px;
 background: black;
 color: #fff;
 opacity: .7;
