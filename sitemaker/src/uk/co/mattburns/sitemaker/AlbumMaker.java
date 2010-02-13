@@ -24,6 +24,8 @@ public class AlbumMaker {
 	private static final File CSS_DIR = new File("C:/svnrepos/mattburnsphotos/css");
 	private static final File TEMPLATE_HTML = new File("C:/svnrepos/mattburnsphotos/sitemaker/templates/album.html");
 	private static final File HOME_HTML = new File("C:/svnrepos/mattburnsphotos/index.html");
+	private static final File CONTACT_HTML = new File("C:/svnrepos/mattburnsphotos/contact.html");
+	private static final File PRICES_HTML = new File("C:/svnrepos/mattburnsphotos/prices.html");
 
 	public static void main(String[] args) throws IOException {
 
@@ -36,19 +38,21 @@ public class AlbumMaker {
 					+ args[1]);
 		}
 
-		new AlbumMaker(albumName, photoSourceDirectory);
+		new AlbumMaker(albumName, albumName, photoSourceDirectory);
 	}
 
-	public AlbumMaker(String albumName, File photoSourceDirectory) throws IOException {
+	public AlbumMaker(String albumID, String albumName, File photoSourceDirectory) throws IOException {
 		GENERATED_DIR.mkdirs();
 		copyFile(CSS_DIR, new File(GENERATED_DIR, "css"));
 		copyFile(IMAGES_DIR, new File(GENERATED_DIR, "images"));
 		copyFile(JAVASCRIPT_DIR, new File(GENERATED_DIR, "javascript"));
-		copyFile(HOME_HTML, new File(GENERATED_DIR, "index.html"));
+		copyFile(HOME_HTML, GENERATED_DIR);
+		copyFile(CONTACT_HTML, GENERATED_DIR);
+		copyFile(PRICES_HTML, GENERATED_DIR);
 
-		File clientAlbumsDirectory = new File(GENERATED_DIR, "clients");
+		File clientAlbumsDirectory = new File(GENERATED_DIR, "c");
 
-		File albumDir = new File(clientAlbumsDirectory, albumName);
+		File albumDir = new File(clientAlbumsDirectory, albumID);
 		albumDir.mkdirs();
 
 		List<File> sourcePhotos = new ArrayList<File>();
@@ -58,19 +62,20 @@ public class AlbumMaker {
 			}
 		}
 
-		makeHtml(albumName, albumDir, sourcePhotos);
+		makeHtml(albumID, albumName, albumDir, sourcePhotos);
 		makeThumbs(albumDir, sourcePhotos);
 		makeMediumPhotos(albumDir, sourcePhotos);
 
 		System.out.println("Finished " + albumName + " album :)");
 	}
 
-	private void makeHtml(String albumName, File albumDir, List<File> sourcePhotos) throws IOException {
+	private void makeHtml(String albumID, String albumName, File albumDir, List<File> sourcePhotos) throws IOException {
 		BufferedReader reader = new BufferedReader(new FileReader(TEMPLATE_HTML));
 		FileWriter writer = new FileWriter(new File(albumDir, "index.html"));
 		
 		String line = reader.readLine();
 		while (line != null) {
+			line = line.replaceAll("albumIDTag", albumName);
 			line = line.replaceAll("albumNameTag", albumName);
 			if (line.contains("photo repeat start")) {
 				StringBuilder sb = new StringBuilder();
@@ -170,18 +175,21 @@ public class AlbumMaker {
                         new File(targetLocation, children[i]));
             }
         } else {
-            
-            InputStream in = new FileInputStream(sourceLocation);
-            OutputStream out = new FileOutputStream(targetLocation);
-            
-            // Copy the bits from instream to outstream
-            byte[] buf = new byte[1024];
-            int len;
-            while ((len = in.read(buf)) > 0) {
-                out.write(buf, 0, len);
+            if (targetLocation.isDirectory()) {
+            	copyFile(sourceLocation, new File(targetLocation, sourceLocation.getName()));
+            } else {
+	            InputStream in = new FileInputStream(sourceLocation);
+	            OutputStream out = new FileOutputStream(targetLocation);
+	            
+	            // Copy the bits from instream to outstream
+	            byte[] buf = new byte[1024];
+	            int len;
+	            while ((len = in.read(buf)) > 0) {
+	                out.write(buf, 0, len);
+	            }
+	            in.close();
+	            out.close();
             }
-            in.close();
-            out.close();
         }
     }
 }
