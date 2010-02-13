@@ -93,3 +93,43 @@ ul.menu:hover li:hover a.menuselected:hover {
 	background-color: #222;
 }
 
+.hidden
+{
+display: none;
+}
+
+#prevNext
+{
+margin: 320px 30px -300px 30px;
+min-width: 300px;
+}
+#jFlowSlide{
+border: 15px solid #eee;
+}
+
+#prevNext img
+{
+position: relative;
+z-index: 2;
+cursor: pointer;
+}
+
+.jFlowNext {
+float:right;
+}
+
+#slides p
+{
+margin: 0;
+padding: 0 1em;
+font-size: 1.5em;
+position: relative;
+top: -50px;
+line-height: 50px;
+height: 50px;
+background: black;
+color: #fff;
+opacity: .7;
+filter:alpha(opacity=70);
+}
+
