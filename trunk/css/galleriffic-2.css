@@ -15,11 +15,10 @@ div.content a:focus, div.content a:hover, div.content a:active {
 div.controls {
 	margin-top: 5px;
 	height: 23px;
+	padding: 0px 20px 5px 20px;
 }
 div.controls a {
-	margin: 7px;
 	padding: 5px;
-	width: 600px;
 }
 div.ss-controls {
 	float: left;
@@ -93,10 +92,13 @@ div.image-desc {
 div.navigation {
 	/* The navigation style is set using jQuery so that the javascript specific styles won't be applied unless javascript is enabled. */
 }
+#thumbs {
+	padding: 28px 0px 0px 0px;
+}
 ul.thumbs {
 	clear: both;
 	margin: 0;
-	padding: 22px 0px 0px 0px;
+	padding: 0px;
 }
 ul.thumbs li {
 	float: left;
