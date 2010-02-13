@@ -48,6 +48,7 @@ public class AlbumMaker {
 		File clientAlbumsDirectory = new File(GENERATED_DIR, "clients");
 
 		File albumDir = new File(clientAlbumsDirectory, albumName);
+		albumDir.mkdirs();
 
 		List<File> sourcePhotos = new ArrayList<File>();
 		for (File photo : photoSourceDirectory.listFiles()) {
