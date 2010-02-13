@@ -72,19 +72,24 @@ ul.menu {
 	margin: 0;
 	padding: 0;
 }
-ul.menu li {
+ul.menu li{
 	float: right;
-	margin:.5em;
 	list-style: none;
 }
-ul.menu:hover li:hover{
-	text-decoration: underline;
+
+ul.menu li a {
+	padding: 10px;
+}
+
+ul.menu:hover li:hover a:hover {
+	background-color: #eee;
 }
 .menuselected {
 	color: #999;
 	cursor: none;
 }
-.menuselected:hover {
+ul.menu:hover li:hover a.menuselected:hover {
 	text-decoration: none;
+	background-color: #222;
 }
 
