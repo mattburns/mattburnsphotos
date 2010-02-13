@@ -57,7 +57,7 @@ public class AlbumMaker {
 
 		List<File> sourcePhotos = new ArrayList<File>();
 		for (File photo : photoSourceDirectory.listFiles()) {
-			if (photo.getName().endsWith("jpg")) {
+			if (photo.getName().toLowerCase().endsWith("jpg") || photo.getName().toLowerCase().endsWith("jpeg")) {
 				sourcePhotos.add(photo);
 			}
 		}
