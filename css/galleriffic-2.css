@@ -17,7 +17,9 @@ div.controls {
 	height: 23px;
 }
 div.controls a {
+	margin: 7px;
 	padding: 5px;
+	width: 600px;
 }
 div.ss-controls {
 	float: left;
@@ -51,17 +53,16 @@ div.slideshow span.image-wrapper {
 }
 div.slideshow a.advance-link {
 	display: block;
+	height: 400px; /* This should be set to be at least the height of the largest image in the slideshow */
 	width: 650px;
-	height: 602px; /* This should be set to be at least the height of the largest image in the slideshow */
-	line-height: 602px; /* This should be set to be at least the height of the largest image in the slideshow */
+	line-height: 402px; /* This should be set to be at least the height of the largest image in the slideshow */
 	text-align: center;
 }
 div.slideshow a.advance-link:hover, div.slideshow a.advance-link:active, div.slideshow a.advance-link:visited {
 	background-color: #222;
 }
 div.slideshow img {
-	vertical-align: middle;
-	border: 10px solid #eee;
+	border: 15px solid #eee;
 }
 div.download {
 	float: right;
@@ -95,7 +96,7 @@ div.navigation {
 ul.thumbs {
 	clear: both;
 	margin: 0;
-	padding: 0;
+	padding: 22px 0px 0px 0px;
 }
 ul.thumbs li {
 	float: left;
@@ -125,6 +126,7 @@ div.pagination {
 div.navigation div.top {
 	margin-bottom: 12px;
 	height: 11px;
+	display:none;
 }
 div.navigation div.bottom {
 	margin-top: 12px;

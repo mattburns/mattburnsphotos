@@ -104,7 +104,7 @@ public class AlbumMaker {
 				String command = CONVERT
 						+ " \""
 						+ photo.getAbsolutePath()
-						+ "\" -resize 100x100^^ -gravity center -quality 75 -extent 100x100 \""
+						+ "\" -resize 50x50^^ -gravity center -strip -quality 75 -extent 50x50 \""
 						+ destinationFile.getAbsolutePath() + "\"";
 				runCommand(command);
 			}
@@ -119,7 +119,7 @@ public class AlbumMaker {
 			File mediumFile = new File(mediumDir, photo.getName());
 			if (!mediumFile.exists()) {
 				String command = CONVERT + " \"" + photo.getAbsolutePath()
-						+ "\" -resize 600x600 \""
+						+ "\" -resize 600x400 \""
 						+ mediumFile.getAbsolutePath() + "\"";
 				runCommand(command);
 				waterMarkPhoto(mediumFile);
@@ -130,7 +130,7 @@ public class AlbumMaker {
 	private void waterMarkPhoto(File photo) {
 		File stampedFile = new File(photo.getAbsolutePath() + ".stamped.jpg");
 		String command = COMPOSITE
-				+ " -gravity south -geometry +0+10 -quality 85 " + WATERMARK + " \""
+				+ " -gravity south -geometry +0+10 -strip -quality 85 " + WATERMARK + " \""
 				+ photo.getAbsolutePath() + "\" \""
 				+ stampedFile.getAbsolutePath() + "\"";
 		runCommand(command);
