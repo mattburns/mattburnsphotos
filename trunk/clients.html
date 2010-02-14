@@ -1,7 +1,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-type" content="text/html; charset=utf-8">
-		<title>mattburnsphotos | albumNameTag</title>
+		<title>mattburnsphotos | clients</title>
 		<link rel="stylesheet" href="css/basic.css" type="text/css" />
 
 		<script src="javascript/jquery-1.4.1.min.js" type="text/javascript"></script>
@@ -15,6 +15,18 @@
 
 		function redirectPage() {
 			window.location = "c/" + $( "#passwordtext" ).val() + "/index.html";
+		}
+		
+		function keyDownHandler(btn)
+		{
+			// process only the Enter key
+			if (event.keyCode == 13)
+			{
+				// cancel the default submit
+				event.returnValue=false;
+				event.cancel = true;
+				$( "#gobutton" ).click()
+			}
 		}
 		
 		</script>
@@ -43,8 +55,8 @@
 				<p></p>
 				<form>
 				To view your album, just enter your password : 
-					<input type="text" id="passwordtext" >
-					<button type="button" onClick="redirectPage()">Go</button>
+					<input type="text" id="passwordtext" onKeyDown="keyDownHandler()"/>
+					<button id="gobutton" type="button" onClick="redirectPage()">Go</button>
 				</form>
 			</div>
 			
