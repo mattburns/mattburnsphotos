@@ -108,6 +108,10 @@ ul.menu:hover li:hover a.menuselected:hover {
 display: none;
 }
 
+.orderprints {
+	float:right;
+}
+
 #prevNext
 {
 margin: 560px 0px -533px 60px;
