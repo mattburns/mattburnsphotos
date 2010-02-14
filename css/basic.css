@@ -96,7 +96,7 @@ ul.menu:hover li:hover a:hover, #golink:hover {
 }
 .menuselected {
 	color: #999;
-	cursor: none;
+	cursor: text;
 }
 ul.menu:hover li:hover a.menuselected:hover {
 	text-decoration: none;
