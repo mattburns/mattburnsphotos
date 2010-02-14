@@ -29,7 +29,7 @@ div.nav-controls {
 div.slideshow-container {
 	position: relative;
 	clear: both;
-	height: 602px; /* This should be set to be at least the height of the largest image in the slideshow */
+	height: 452px; /* This should be set to be at least the height of the largest image in the slideshow */
 }
 div.loader {
 	position: absolute;
@@ -39,7 +39,7 @@ div.loader {
 	background-repeat: no-repeat;
 	background-position: center;
 	width: 650px;
-	height: 602px; /* This should be set to be at least the height of the largest image in the slideshow */
+	height: 452px; /* This should be set to be at least the height of the largest image in the slideshow */
 }
 div.slideshow {
 
