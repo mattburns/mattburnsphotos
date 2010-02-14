@@ -25,6 +25,7 @@ public class AlbumMaker {
 	private static final File TEMPLATE_HTML = new File("C:/svnrepos/mattburnsphotos/sitemaker/templates/album.html");
 	private static final File HOME_HTML = new File("C:/svnrepos/mattburnsphotos/index.html");
 	private static final File CONTACT_HTML = new File("C:/svnrepos/mattburnsphotos/contact.html");
+	private static final File CLIENTS_HTML = new File("C:/svnrepos/mattburnsphotos/clients.html");
 	private static final File PRICES_HTML = new File("C:/svnrepos/mattburnsphotos/prices.html");
 
 	public static void main(String[] args) throws IOException {
@@ -49,6 +50,7 @@ public class AlbumMaker {
 		copyFile(HOME_HTML, GENERATED_DIR);
 		copyFile(CONTACT_HTML, GENERATED_DIR);
 		copyFile(PRICES_HTML, GENERATED_DIR);
+		copyFile(CLIENTS_HTML, GENERATED_DIR);
 
 		File clientAlbumsDirectory = new File(GENERATED_DIR, "c");
 
