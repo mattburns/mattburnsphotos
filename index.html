@@ -3,19 +3,18 @@
 		<meta http-equiv="Content-type" content="text/html; charset=utf-8">
 		<title>mattburnsphotos</title>
 		<link rel="stylesheet" href="css/basic.css" type="text/css" />
-
+		<link rel="stylesheet" href="css/galleriffic-2.css" type="text/css" />
 		<script type="text/javascript" src="javascript/jquery-1.4.1.min.js"></script>
-		<script type="text/javascript" src="javascript/jquery.flow.1.1.min.js"></script>
-
-		<script type="text/javascript">
-		$(function() {
-			$("div#controller").jFlow({
-				slides: "#slides",
-				width: "830px",
-				height: "554px"
-			});
-		});
-		</script>
+		<script type="text/javascript" src="javascript/jquery.cross-slide.js"></script>
+		<style type="text/css">
+			#test3 {
+				margin: 0px auto;
+				border: 15px solid #fff;
+				width: 830px;
+				height: 554px;
+				margin-top: 50px;
+			}
+		</style>
 	</head>
 	<body>
 		<div id="page">
@@ -29,39 +28,61 @@
 						<li>|</li>
 						<li><a href="prices.html">prices</a></li>
 						<li>|</li>
-						<li><a href="c/portfolio/index.html">portfolio</a></li>
+						<li><a href="index.html">portfolio</a></li>
 						<li>|</li>
 						<li><a class="menuselected" href="index.html">home</a></li>
 					</ul>
 				</div>
-				<div id="wrap">
-
-					<div id="controller" class="hidden">
-						<span class="jFlowControl"></span>
-						<span class="jFlowControl"></span>
-						<span class="jFlowControl"></span>
-						<span class="jFlowControl">No 3</span>
-						<span class="jFlowControl">No 4</span>
-						<span class="jFlowControl">No 5</span>
-					</div>
-					
-					<div id="prevNext">
-						<img src="images/leftarrow.png" alt="Previous Tab" class="jFlowPrev" />
-						<img src="images/rightarrow.png" alt="Next Tab" class="jFlowNext" />
-					</div>
-					
-					<div id="slides">
-						<div><img src="images/0.jpg" alt="photo" /></div>
-						<div><img src="images/1.jpg" alt="photo" /></div>
-						<div><img src="images/2.jpg" alt="photo" /></div>
-						<div><img src="images/3.jpg" alt="photo" /></div>
-						<div><img src="images/4.jpg" alt="photo" /></div>
-						<div><img src="images/5.jpg" alt="photo" /></div>
-					</div>
-					
-				</div>
+				
+				<div id="test3">Loading…</div>
 			</div>
 		</div>
+
+		<script type="text/javascript">
+jQuery(document).ready(function($) {
+$('#test3').crossSlide({
+  fade: 1
+}, [
+  {
+    src:  'images/0.jpg',
+    href: 'portfolio.html',
+    from: '100% 100% 1x',
+    to:   '0% 20% 1.2x',
+    time: 2
+  }, {
+    src:  'images/1.jpg',
+    href: 'portfolio.html',
+    from: '0% 100% 1.2x',
+    to:   '100% 0% 1x',
+    time: 2
+  }, {
+    src:  'images/2.jpg',
+    href: 'portfolio.html',
+    from: '0% 100% 1.2x',
+    to:   '100% 0% 1x',
+    time: 2
+  }, {
+    src:  'images/3.jpg',
+    href: 'portfolio.html',
+    from: '100% 100% 1.2x',
+    to:   '0% 0% 1x',
+    time: 2
+  }, {
+    src:  'images/4.jpg',
+    href: 'portfolio.html',
+    from: '0% 100% 1.2x',
+    to:   '100% 0% 1x',
+    time: 2
+  }, {
+    src:  'images/5.jpg',
+    href: 'portfolio.html',
+    from: '100% 0% 1.2x',
+    to:   '0% 100% 1x',
+    time: 2
+  }
+]);
+});
+		</script>
 		<script type="text/javascript">
 			var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
 			document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
