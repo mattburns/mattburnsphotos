@@ -899,6 +899,9 @@
 					this.$controlsContainer
 						.append('<div class="ss-controls"><a href="#play" class="play" title="'+this.playLinkText+'">'+this.playLinkText+'</a></div>');
 				}
+				
+				this.$controlsContainer
+						.append(' <a href="http://www.photoboxgallery.com/mattburnsphotos">order prints</a>');
 
 				this.$controlsContainer.find('div.ss-controls a')
 					.click(function(e) {
