@@ -108,8 +108,9 @@ ul.menu:hover li:hover a.menuselected:hover {
 display: none;
 }
 
-.orderprints {
-	float:right;
+#orderprints {
+	float:left;
+	width:100px;
 }
 
 #prevNext
@@ -151,4 +152,3 @@ filter:alpha(opacity=70);
 .prices {
 	color: ccc;
 }
-
