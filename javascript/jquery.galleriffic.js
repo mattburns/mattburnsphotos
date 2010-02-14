@@ -384,7 +384,7 @@
 
 				if (this.$controlsContainer) {
 					this.$controlsContainer
-						.find('div.ss-controls a').removeClass().addClass('play')
+						.find('div.ss-controls a').first().removeClass().addClass('play')
 						.attr('title', this.playLinkText)
 						.attr('href', '#play')
 						.html(this.playLinkText);
@@ -399,7 +399,7 @@
 
 				if (this.$controlsContainer) {
 					this.$controlsContainer
-						.find('div.ss-controls a').removeClass().addClass('pause')
+						.find('div.ss-controls a').first().removeClass().addClass('pause')
 						.attr('title', this.pauseLinkText)
 						.attr('href', '#pause')
 						.html(this.pauseLinkText);
@@ -894,16 +894,16 @@
 			if (this.renderSSControls) {
 				if (this.autoStart) {
 					this.$controlsContainer
-						.append('<div class="ss-controls"><a href="#pause" class="pause" title="'+this.pauseLinkText+'">'+this.pauseLinkText+'</a></div>');
+						.append('<div class="ss-controls"><a href="#pause" class="pause" title="'+this.pauseLinkText+'">'+this.pauseLinkText+'</a><a href="http://www.photoboxgallery.com/mattburnsphotos">order prints</a></div>');
 				} else {
 					this.$controlsContainer
-						.append('<div class="ss-controls"><a href="#play" class="play" title="'+this.playLinkText+'">'+this.playLinkText+'</a></div>');
+						.append('<div class="ss-controls"><a href="#play" class="play" title="'+this.playLinkText+'">'+this.playLinkText+'</a><a href="http://www.photoboxgallery.com/mattburnsphotos">order prints</a></div>');
 				}
 				
 				this.$controlsContainer
-						.append(' <a href="http://www.photoboxgallery.com/mattburnsphotos">order prints</a>');
+						.append(' ');
 
-				this.$controlsContainer.find('div.ss-controls a')
+				this.$controlsContainer.find('div.ss-controls a').first()
 					.click(function(e) {
 						gallery.toggleSlideshow();
 						e.preventDefault();
