@@ -13,6 +13,7 @@ a{
 	cursor: pointer;
 	color: #666;
 	text-decoration: none;
+	border:0px;
 }
 a:focus, a:hover, a:active {
 	text-decoration: underline;
@@ -36,6 +37,9 @@ h1 {
 	font-size: 3em;
 	width: 500px;
 	float:left;
+}
+img {
+	border:0px;
 }
 h2 {
 	padding-top: 10px;
@@ -83,11 +87,11 @@ ul.menu li{
 	list-style: none;
 }
 
-ul.menu li a {
-	padding: 10px;
+ul.menu li a , #golink{
+	padding: 5px;
 }
 
-ul.menu:hover li:hover a:hover {
+ul.menu:hover li:hover a:hover, #golink:hover {
 	background-color: #eee;
 }
 .menuselected {
@@ -118,6 +122,7 @@ border: 15px solid #eee;
 position: relative;
 z-index: 2;
 cursor: pointer;
+
 }
 
 .jFlowNext {
