@@ -65,6 +65,7 @@ div#page {
 }
 div#container {
 	padding: 20px;
+	height:635px;
 }
 div#ads {
 	clear: both;
