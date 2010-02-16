@@ -29,7 +29,7 @@ div.nav-controls {
 div.slideshow-container {
 	position: relative;
 	clear: both;
-	height: 452px; /* This should be set to be at least the height of the largest image in the slideshow */
+	height: 430px; /* This should be set to be at least the height of the largest image in the slideshow + (border x 2) */
 }
 div.loader {
 	position: absolute;
@@ -39,7 +39,7 @@ div.loader {
 	background-repeat: no-repeat;
 	background-position: center;
 	width: 650px;
-	height: 452px; /* This should be set to be at least the height of the largest image in the slideshow */
+	height: 430px; /* This should be set to be at least the height of the largest image in the slideshow + (border x 2) */
 }
 div.slideshow {
 
@@ -52,9 +52,9 @@ div.slideshow span.image-wrapper {
 }
 div.slideshow a.advance-link {
 	display: block;
-	height: 400px; /* This should be set to be at least the height of the largest image in the slideshow */
+	height: 430px; /* This should be set to be at least the height of the largest image in the slideshow + (border x 2) */
 	width: 650px;
-	line-height: 402px; /* This should be set to be at least the height of the largest image in the slideshow */
+	line-height: 430px; /* This should be set to be at least the height of the largest image in the slideshow + (border x 2) */
 	text-align: center;
 }
 div.slideshow a.advance-link:hover, div.slideshow a.advance-link:active, div.slideshow a.advance-link:visited {

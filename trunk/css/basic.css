@@ -29,7 +29,7 @@ h1, h2 {
 	font-family: "Trebuchet MS", Verdana, sans-serif;
 	margin: 0;
 	letter-spacing:-1px;
-	color: #333;
+	color: #ccc;
 	clear: both;
 }
 h1 {
@@ -151,5 +151,6 @@ filter:alpha(opacity=70);
 }
 
 .prices {
-	color: ccc;
+	list-style-type:square;
+	color: #ccc;
 }
