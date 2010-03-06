@@ -14,7 +14,7 @@ import java.util.List;
 
 public class AlbumMaker {
 
-	private static final String IMAGEMAGICK = "C:\\Program Files\\ImageMagick-6.5.9-2\\";
+	private static final String IMAGEMAGICK = "C:/Program Files/ImageMagick-6.6.0-Q16/";
 	private static final String WATERMARK = "\"C:\\svnrepos\\mattburnsphotos\\images\\watermark.png\"";
 	private static final String CONVERT = "\"" + IMAGEMAGICK + "convert\"";
 	private static final String COMPOSITE = "\"" + IMAGEMAGICK + "composite\"";
@@ -25,6 +25,7 @@ public class AlbumMaker {
 	private static final File TEMPLATE_HTML = new File("C:/svnrepos/mattburnsphotos/sitemaker/templates/album.html");
 	private static final File HOME_HTML = new File("C:/svnrepos/mattburnsphotos/index.html");
 	private static final File CONTACT_HTML = new File("C:/svnrepos/mattburnsphotos/contact.html");
+	private static final File CREDITS_HTML = new File("C:/svnrepos/mattburnsphotos/credits.html");
 	private static final File CLIENTS_HTML = new File("C:/svnrepos/mattburnsphotos/clients.html");
 	private static final File PRICES_HTML = new File("C:/svnrepos/mattburnsphotos/prices.html");
 
@@ -51,6 +52,7 @@ public class AlbumMaker {
 		copyFile(CONTACT_HTML, GENERATED_DIR);
 		copyFile(PRICES_HTML, GENERATED_DIR);
 		copyFile(CLIENTS_HTML, GENERATED_DIR);
+		copyFile(CREDITS_HTML, GENERATED_DIR);
 
 		File clientAlbumsDirectory = new File(GENERATED_DIR, "c");
 
