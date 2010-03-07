@@ -14,6 +14,7 @@ import java.util.List;
 
 public class AlbumMaker {
 
+	public static final String PORTFOLIO = "portfolio";
 	private static final String IMAGEMAGICK = "C:/Program Files/ImageMagick-6.6.0-Q16/";
 	private static final String WATERMARK = "\"C:\\svnrepos\\mattburnsphotos\\images\\watermark.png\"";
 	private static final String CONVERT = "\"" + IMAGEMAGICK + "convert\"";
@@ -79,6 +80,12 @@ public class AlbumMaker {
 		
 		String line = reader.readLine();
 		while (line != null) {
+			if (albumID.equals(PORTFOLIO) && line.contains("album-only start")) {
+				while (!line.contains("album-only stop")) {
+					line = reader.readLine();
+				}
+				line = reader.readLine();
+			}
 			line = line.replaceAll("albumIDTag", albumName);
 			line = line.replaceAll("albumNameTag", albumName);
 			if (line.contains("photo repeat start")) {

@@ -50,16 +50,36 @@
 				</div>
 				<div id="thumbs" class="navigation">
 					<ul class="thumbs noscript">
-<!--photo repeat start-->
+						<!--photo repeat start-->
 						<li>
 							<a class="thumb" name="photoTag" href="medium/photoTag" title="photoTag">
 								<img src="thumbs/photoTag" alt="photoTag" />
 							</a>
 						</li>
-<!--photo repeat stop-->
+						<!--photo repeat stop-->
 					</ul>
 				</div>
-				<div style="clear: both;"></div>
+				<div style="clear: both;" ></div>
+				<!--album-only start-->
+				<form action="https://checkout.google.com/api/checkout/v2/checkoutForm/Merchant/204392506647222" id="BB_BuyButtonForm" method="post" name="BB_BuyButtonForm" target="_top">
+					<table cellpadding="5" cellspacing="0" width="100%">
+						<tr>
+							<td align="right" width="100%">
+								order DVD :
+							</td>
+							<td align="right" width="100%">
+								<input name="item_name_1" type="hidden" value="albumNameTag album on DVD"/>
+								<input name="item_description_1" type="hidden" value="A DVD containing all of the original and edited photos in full quality"/>
+								<input name="item_quantity_1" type="hidden" value="1"/>
+								<input name="item_price_1" type="hidden" value="50.0"/>
+								<input name="item_currency_1" type="hidden" value="GBP"/>
+								<input name="_charset_" type="hidden" value="utf-8"/>
+								<input alt="" src="https://checkout.google.com/buttons/buy.gif?merchant_id=204392506647222&amp;w=121&amp;h=44&amp;style=trans&amp;variant=text&amp;loc=en_US" type="image"/>
+							</td>
+						</tr>
+					</table>
+				</form>
+				<!--album-only stop-->
 			</div>
 		</div>
 
