@@ -61,24 +61,31 @@
 				</div>
 				<div style="clear: both;" ></div>
 				<!--album-only start-->
-				<form action="https://checkout.google.com/api/checkout/v2/checkoutForm/Merchant/204392506647222" id="BB_BuyButtonForm" method="post" name="BB_BuyButtonForm" target="_top">
-					<table cellpadding="5" cellspacing="0" width="100%">
-						<tr>
-							<td align="right" width="100%">
-								order DVD :
-							</td>
-							<td align="right" width="100%">
-								<input name="item_name_1" type="hidden" value="albumNameTag album on DVD"/>
-								<input name="item_description_1" type="hidden" value="A DVD containing all of the original and edited photos in full quality"/>
-								<input name="item_quantity_1" type="hidden" value="1"/>
-								<input name="item_price_1" type="hidden" value="50.0"/>
-								<input name="item_currency_1" type="hidden" value="GBP"/>
-								<input name="_charset_" type="hidden" value="utf-8"/>
-								<input alt="" src="https://checkout.google.com/buttons/buy.gif?merchant_id=204392506647222&amp;w=121&amp;h=44&amp;style=trans&amp;variant=text&amp;loc=en_US" type="image"/>
-							</td>
-						</tr>
-					</table>
-				</form>
+				<table cellpadding="5" cellspacing="0" width="100%">
+					<tr>
+						<td align="right" width="100%">
+							<div class="product">
+								<input id="prodtitle" type="hidden" class="product-title" value="">
+								<img id="prodimage" style="display: none;" class="product-image" src=""/>
+								<select class="product-attr-custom">
+									<option value="6x4"   googlecart-set-product-price="1.00">6"x4" - £1.00</option>
+									<option value="9x6"   googlecart-set-product-price="5.00">9"x6" - £5.00</option>
+									<option value="15x10" googlecart-set-product-price="15.00">15x10 - £15.00</option>
+									<option value="30x20" googlecart-set-product-price="30.00">30x20 - £30.00</option>
+									<option value="albumNameTag album on DVD" googlecart-set-product-price="50.00" selected="selected">albumNameTag album on DVD - £50.00</option>
+								</select>
+								<input type="hidden" class="product-price" value="14.99">
+								<div class="googlecart-add-button" tabindex="0" role="button" title="Add to cart">
+								
+								</div>
+								<div id="googlecart-widget-control" googlecart-widget-control-align="right" style="text-decoration:underline;height:30px">View cart</div>
+							</div>
+						</td>
+				</tr>
+				</table>
+				
+				<script id='googlecart-script' type='text/javascript' src='https://checkout.google.com/seller/gsc/v2_2/cart.js?mid=204392506647222'
+					free-shipping-order-size="20" integration='jscart-wizard' post-cart-to-sandbox='false' currency='GBP' productWeightUnits='KG'></script>
 				<!--album-only stop-->
 			</div>
 		</div>
