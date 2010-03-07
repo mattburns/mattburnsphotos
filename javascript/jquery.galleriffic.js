@@ -512,6 +512,22 @@
 				
 				this.refresh();
 				
+				// bit of hacking here to change the product title when image changes
+				$("select").change(function () {
+					$("select option:selected").each(function () {
+						var selectedProduct = $(this).attr('value');
+							// more hacking here to change product title to DVD when dropdown selected
+							if (selectedProduct.indexOf("DVD") == -1) {
+								$('#prodtitle').attr('value', imageData.title);
+								$('#prodimage').attr('src', 'thumbs/' + imageData.title);
+							} else {
+								$('#prodtitle').attr('value', selectedProduct);
+								$('#prodimage').attr('src', '../../images/dvd.png');
+							}
+						});
+				})
+				.trigger('change');
+				
 				return this;
 			},
 
@@ -894,10 +910,10 @@
 			if (this.renderSSControls) {
 				if (this.autoStart) {
 					this.$controlsContainer
-						.append('<div class="ss-controls"><a href="#pause" class="pause" title="'+this.pauseLinkText+'">'+this.pauseLinkText+'</a><a href="http://www.photoboxgallery.com/mattburnsphotos">order prints</a></div>');
+						.append('<div class="ss-controls"><a href="#pause" class="pause" title="'+this.pauseLinkText+'">'+this.pauseLinkText+'</a></div>');
 				} else {
 					this.$controlsContainer
-						.append('<div class="ss-controls"><a href="#play" class="play" title="'+this.playLinkText+'">'+this.playLinkText+'</a><a href="http://www.photoboxgallery.com/mattburnsphotos">order prints</a></div>');
+						.append('<div class="ss-controls"><a href="#play" class="play" title="'+this.playLinkText+'">'+this.playLinkText+'</a></div>');
 				}
 				
 				this.$controlsContainer
