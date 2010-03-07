@@ -9,13 +9,13 @@ body{
 	color: #444;
 	font-size: 75%;
 }
-a{
+a, #googlecart-widget-control{
 	cursor: pointer;
 	color: #666;
 	text-decoration: none;
 	border:0px;
 }
-a:focus, a:hover, a:active {
+a:focus, a:hover, a:active, #googlecart-widget-control:hover {
 	text-decoration: underline;
 }
 p{
@@ -78,21 +78,21 @@ div#footer {
 	padding: 20px 0 40px;
 	text-align: center;
 }
-ul.menu {
+ul.menu, #googlecart-widget-control {
 	float: right;
 	margin: 0;
 	padding: 0;
 }
-ul.menu li{
+ul.menu li, #googlecart-widget-control{
 	float: right;
 	list-style: none;
 }
 
-ul.menu li a , #golink{
-	padding: 5px;
+ul.menu li a , #golink, #googlecart-widget-control{
+	padding: 0px 5px 5px 5px;
 }
 
-ul.menu:hover li:hover a:hover, #golink:hover {
+ul.menu:hover li:hover a:hover, #golink:hover, #googlecart-widget-control:hover {
 	background-color: #eee;
 }
 .menuselected {
