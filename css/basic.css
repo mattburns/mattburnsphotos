@@ -9,13 +9,13 @@ body{
 	color: #444;
 	font-size: 75%;
 }
-a, #googlecart-widget-control{
+a, #googlecart-widget-control, .googlecart-add {
 	cursor: pointer;
 	color: #666;
 	text-decoration: none;
 	border:0px;
 }
-a:focus, a:hover, a:active, #googlecart-widget-control:hover {
+a:focus, a:hover, a:active, #googlecart-widget-control:hover, .googlecart-add :hover {
 	text-decoration: underline;
 }
 p{
@@ -78,21 +78,21 @@ div#footer {
 	padding: 20px 0 40px;
 	text-align: center;
 }
-ul.menu, #googlecart-widget-control {
+ul.menu, #googlecart-widget-control, .googlecart-add {
 	float: right;
 	margin: 0;
 	padding: 0;
 }
-ul.menu li, #googlecart-widget-control{
+ul.menu li, #googlecart-widget-control, .googlecart-add {
 	float: right;
 	list-style: none;
 }
 
-ul.menu li a , #golink, #googlecart-widget-control{
+ul.menu li a , #golink, #googlecart-widget-control, .googlecart-add {
 	padding: 0px 5px 5px 5px;
 }
 
-ul.menu:hover li:hover a:hover, #golink:hover, #googlecart-widget-control:hover {
+ul.menu:hover li:hover a:hover, #golink:hover, #googlecart-widget-control:hover, .googlecart-add:hover {
 	background-color: #eee;
 }
 .menuselected {
@@ -153,4 +153,31 @@ filter:alpha(opacity=70);
 .prices {
 	list-style-type:square;
 	color: #ccc;
+}
+
+.googlecart-override #googlecart-widget-body {
+    background-color: #999 !important;
+	border: 10px solid #eee !important;
+}
+
+.googlecart-override .googlecart-widget-title {
+	color: #000 !important;
+}
+
+.googlecart-override .googlecart-widget-item {
+    background-color: #999 !important;
+	border-bottom: 5px solid #eee !important;
+}
+
+.googlecart-override .googlecart-widget-price {
+   color: #222 !important;
+}
+
+.googlecart-override #googlecart-add-button {
+    border-top-width: 4px;
+}
+
+.googlecart-add {
+	padding: 5px;
+	margin-right: 2px;
 }
