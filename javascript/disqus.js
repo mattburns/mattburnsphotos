@@ -103,7 +103,7 @@ if (typeof (disqus_author_s2) != "undefined") {
 }
 if (typeof (disqus_shortname) == "undefined") {
 	//disqus_shortname = disqus_detect_shortname()
-	disqus_shortname = 'mattburns';
+	disqus_shortname = 'mattburnsuk';
 }
 if (typeof (disqus_domain) == "undefined") {
 	disqus_domain = disqus_dev ? "dev.disqus.org" : "disqus.com"
