@@ -86,7 +86,7 @@ public class AlbumMaker {
 				}
 				line = reader.readLine();
 			}
-			line = line.replaceAll("albumIDTag", albumName);
+			line = line.replaceAll("albumIDTag", albumID);
 			line = line.replaceAll("albumNameTag", albumName);
 			if (line.contains("photo repeat start")) {
 				StringBuilder sb = new StringBuilder();
@@ -144,7 +144,7 @@ public class AlbumMaker {
 			}
 		}
 	}
-
+	
 	private void waterMarkPhoto(File photo) {
 		File stampedFile = new File(photo.getAbsolutePath() + ".stamped.jpg");
 		String command = COMPOSITE
