@@ -511,7 +511,8 @@
 				this.preloadRelocate(index);
 				
 				this.refresh();
-				disqus_url = disqus_url_base + '%26dsq_img_id%3D' + imageData.title;
+				disqus_url = disqus_url_base + '?dsq_img_id=' + imageData.title;
+				disqus_title = imageData.title;
 				disqus_identifier = imageData.title;
 				if (dsq_reload_loader != null) {
 					dsq_reload_loader();
