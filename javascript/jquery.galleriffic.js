@@ -511,12 +511,6 @@
 				this.preloadRelocate(index);
 				
 				this.refresh();
-				disqus_url = disqus_url_base + '?dsq_img_id=' + imageData.title;
-				disqus_title = imageData.title;
-				disqus_identifier = imageData.title;
-				if (dsq_reload_loader != null) {
-					dsq_reload_loader();
-				}
 				
 				// bit of hacking here to change the product title when image changes
 				$("select").change(function () {
