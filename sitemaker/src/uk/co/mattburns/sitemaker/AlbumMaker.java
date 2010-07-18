@@ -39,10 +39,11 @@ public class AlbumMaker {
             throw new RuntimeException("arg 1 must be source photo dir: " + args[1]);
         }
 
-        new AlbumMaker(albumName, albumName, photoSourceDirectory);
+        new AlbumMaker(albumName, albumName, photoSourceDirectory, PricePlan.PORTRAIT);
     }
 
-    public AlbumMaker(String albumID, String albumName, File photoSourceDirectory) throws IOException {
+    public AlbumMaker(String albumID, String albumName, File photoSourceDirectory, PricePlan pricePlan)
+            throws IOException {
         if (!photoSourceDirectory.exists()) {
             throw new IllegalArgumentException("Source directory not found: " + photoSourceDirectory);
         }
@@ -68,14 +69,15 @@ public class AlbumMaker {
             }
         }
 
-        makeHtml(albumID, albumName, albumDir, sourcePhotos);
+        makeHtml(albumID, albumName, albumDir, sourcePhotos, pricePlan);
         makeThumbs(albumDir, sourcePhotos);
         makeMediumPhotos(albumDir, sourcePhotos);
 
         System.out.println("Finished " + albumName + " album :)");
     }
 
-    private void makeHtml(String albumID, String albumName, File albumDir, List<File> sourcePhotos) throws IOException {
+    private void makeHtml(String albumID, String albumName, File albumDir, List<File> sourcePhotos, PricePlan pricePlan)
+            throws IOException {
         BufferedReader reader = new BufferedReader(new FileReader(TEMPLATE_HTML));
         FileWriter writer = new FileWriter(new File(albumDir, "index.html"));
 
@@ -86,6 +88,9 @@ public class AlbumMaker {
                     line = reader.readLine();
                 }
                 line = reader.readLine();
+            }
+            if (line.contains("price-plan")) {
+                line = Price.getPricing(pricePlan);
             }
             line = line.replaceAll("albumIDTag", albumID);
             line = line.replaceAll("albumNameTag", albumName);
