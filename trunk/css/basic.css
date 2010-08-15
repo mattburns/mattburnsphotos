@@ -1,10 +1,13 @@
+@import url(http://fonts.googleapis.com/css?family=OFL+Sorts+Mill+Goudy+TT);
+@import url(http://fonts.googleapis.com/css?family=Droid+Sans);
+
 html, body {
 	margin:0;
 	padding:0;
 }
 body{
 	text-align: center;
-	font-family: "Lucida Grande", "Lucida Sans Unicode", Verdana, Helvetica, Arial, sans-serif;
+	font-family: 'Droid Sans', arial, serif;
 	background-color: #444;
 	color: #444;
 	font-size: 75%;
@@ -25,29 +28,38 @@ p, li {
 	line-height: 1.8em;
 
 }
-h1, h2 {
-	font-family: "Trebuchet MS", Verdana, sans-serif;
+h1, h2 ,  .headera ,  .headerb {
+	font-family: 'OFL Sorts Mill Goudy TT', arial, serif;
 	margin: 0;
 	letter-spacing:-1px;
 	color: #ccc;
+	float:left;
 	clear: both;
+	width: 500px;
+	font-weight: normal;
 }
 h1 {
 	padding: 0;
 	font-size: 3em;
-	width: 500px;
-	float:left;
+}
+ .headera, .headerb {
+	font-size:3em;
+	clear: none;
+	width:auto;
+	color:#ccc;
+} 
+
+.headerb {
+	color:green;
 }
 img {
 	border:0px;
 }
 h2 {
 	padding-top: 10px;
-	font-size:3em;
-	width: 500px;
-	float:left;
+	font-size:2em;
 	text-align: left;
-	color: ccc;
+	color: #ccc;
 }
 pre {
 	font-size: 1.2em;
