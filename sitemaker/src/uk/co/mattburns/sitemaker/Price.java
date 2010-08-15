@@ -22,6 +22,7 @@ public class Price {
                 .append("<option value=\"6x4m\"   googlecart-set-product-price=\"3.00\">6\"x4\" mounted - &pound;3.00</option>");
 
         sb.append("<option value=\"9x6\"   googlecart-set-product-price=\"5.00\" >9\"x6\" - &pound;5.00</option>");
+        sb.append("<option value=\"8x6\"   googlecart-set-product-price=\"5.00\" >8\"x6\" - &pound;5.00</option>");
         sb
                 .append("<option value=\"8x6m\" googlecart-set-product-price=\"7.00\" selected=\"selected\">8\"x6\" mounted - &pound;7.00</option>");
         sb.append("<option value=\"15x10\" googlecart-set-product-price=\"15.00\">15\"x10\" - &pound;15.00</option>");
