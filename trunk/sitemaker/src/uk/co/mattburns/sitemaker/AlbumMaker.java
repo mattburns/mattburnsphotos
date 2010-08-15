@@ -171,7 +171,7 @@ public class AlbumMaker {
 
     // If targetLocation does not exist, it will be created.
     public void copyFile(File sourceLocation, File targetLocation) throws IOException {
-        if (sourceLocation.getName().equals(".svn")) {
+        if (sourceLocation.getName().equals(".svn") || sourceLocation.getName().equals("Thumbs.db")) {
             return;
         }
 
