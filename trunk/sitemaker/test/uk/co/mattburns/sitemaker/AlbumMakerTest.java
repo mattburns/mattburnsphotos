@@ -38,7 +38,7 @@ public class AlbumMakerTest {
                 PricePlan.PORTRAIT);
         new AlbumMaker("kcps2010", "Kings Court Leaving Prom", new File(
                 "C:/Documents and Settings/matt/My Documents/My Pictures/2010/2010-07-15_export"), PricePlan.SCHOOL);
-        new AlbumMaker("Nos1931", "Nosworthy", new File(
+        new AlbumMaker("nos1931", "Nosworthy", new File(
                 "C:/Documents and Settings/matt/My Documents/My Pictures/2010/2010-08-14_export"), PricePlan.PORTRAIT);
 
     }
