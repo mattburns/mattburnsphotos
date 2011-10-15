@@ -19,33 +19,47 @@ public class AlbumMaker {
     private static final String WATERMARK = "\"C:\\svnrepos\\mattburnsphotos\\images\\watermark.png\"";
     private static final String CONVERT = "\"" + IMAGEMAGICK + "convert\"";
     private static final String COMPOSITE = "\"" + IMAGEMAGICK + "composite\"";
-    private static final File GENERATED_DIR = new File("C:/svnrepos/mattburnsphotos/generated");
-    private static final File IMAGES_DIR = new File("C:/svnrepos/mattburnsphotos/images");
-    private static final File JAVASCRIPT_DIR = new File("C:/svnrepos/mattburnsphotos/javascript");
-    private static final File CSS_DIR = new File("C:/svnrepos/mattburnsphotos/css");
-    private static final File TEMPLATE_HTML = new File("C:/svnrepos/mattburnsphotos/sitemaker/templates/album.html");
-    private static final File HOME_HTML = new File("C:/svnrepos/mattburnsphotos/index.html");
-    private static final File CONTACT_HTML = new File("C:/svnrepos/mattburnsphotos/contact.html");
-    private static final File CREDITS_HTML = new File("C:/svnrepos/mattburnsphotos/credits.html");
-    private static final File CLIENTS_HTML = new File("C:/svnrepos/mattburnsphotos/clients.html");
-    private static final File PRICES_HTML = new File("C:/svnrepos/mattburnsphotos/prices.html");
+    private static final File GENERATED_DIR = new File(
+            "C:/svnrepos/mattburnsphotos/generated");
+    private static final File IMAGES_DIR = new File(
+            "C:/svnrepos/mattburnsphotos/images");
+    private static final File JAVASCRIPT_DIR = new File(
+            "C:/svnrepos/mattburnsphotos/javascript");
+    private static final File CSS_DIR = new File(
+            "C:/svnrepos/mattburnsphotos/css");
+    private static final File TEMPLATE_HTML = new File(
+            "C:/svnrepos/mattburnsphotos/sitemaker/templates/album.html");
+    private static final File HOME_HTML = new File(
+            "C:/svnrepos/mattburnsphotos/index.html");
+    private static final File CONTACT_HTML = new File(
+            "C:/svnrepos/mattburnsphotos/contact.html");
+    private static final File CREDITS_HTML = new File(
+            "C:/svnrepos/mattburnsphotos/credits.html");
+    private static final File CLIENTS_HTML = new File(
+            "C:/svnrepos/mattburnsphotos/clients.html");
+    private static final File PRICES_HTML = new File(
+            "C:/svnrepos/mattburnsphotos/prices.html");
 
     public static void main(String[] args) throws IOException {
 
         String albumName = args[0];
         File photoSourceDirectory = new File(args[1]);
 
-        if (!photoSourceDirectory.exists() || !photoSourceDirectory.isDirectory()) {
-            throw new RuntimeException("arg 1 must be source photo dir: " + args[1]);
+        if (!photoSourceDirectory.exists()
+                || !photoSourceDirectory.isDirectory()) {
+            throw new RuntimeException("arg 1 must be source photo dir: "
+                    + args[1]);
         }
 
-        new AlbumMaker(albumName, albumName, photoSourceDirectory, PricePlan.PORTRAIT);
+        new AlbumMaker(albumName, albumName, photoSourceDirectory,
+                PricePlan.PORTRAIT_2009);
     }
 
-    public AlbumMaker(String albumID, String albumName, File photoSourceDirectory, PricePlan pricePlan)
-            throws IOException {
+    public AlbumMaker(String albumID, String albumName,
+            File photoSourceDirectory, PricePlan pricePlan) throws IOException {
         if (!photoSourceDirectory.exists()) {
-            throw new IllegalArgumentException("Source directory not found: " + photoSourceDirectory);
+            throw new IllegalArgumentException("Source directory not found: "
+                    + photoSourceDirectory);
         }
         GENERATED_DIR.mkdirs();
         copyFile(CSS_DIR, new File(GENERATED_DIR, "css"));
@@ -64,7 +78,8 @@ public class AlbumMaker {
 
         List<File> sourcePhotos = new ArrayList<File>();
         for (File photo : photoSourceDirectory.listFiles()) {
-            if (photo.getName().toLowerCase().endsWith("jpg") || photo.getName().toLowerCase().endsWith("jpeg")) {
+            if (photo.getName().toLowerCase().endsWith("jpg")
+                    || photo.getName().toLowerCase().endsWith("jpeg")) {
                 sourcePhotos.add(photo);
             }
         }
@@ -76,9 +91,10 @@ public class AlbumMaker {
         System.out.println("Finished " + albumName + " album :)");
     }
 
-    private void makeHtml(String albumID, String albumName, File albumDir, List<File> sourcePhotos, PricePlan pricePlan)
-            throws IOException {
-        BufferedReader reader = new BufferedReader(new FileReader(TEMPLATE_HTML));
+    private void makeHtml(String albumID, String albumName, File albumDir,
+            List<File> sourcePhotos, PricePlan pricePlan) throws IOException {
+        BufferedReader reader = new BufferedReader(
+                new FileReader(TEMPLATE_HTML));
         FileWriter writer = new FileWriter(new File(albumDir, "index.html"));
 
         String line = reader.readLine();
@@ -90,7 +106,7 @@ public class AlbumMaker {
                 line = reader.readLine();
             }
             if (line.contains("price-plan")) {
-                line = Price.getPricing(pricePlan);
+                line = pricePlan.getGoogleCartHtml();
             }
             line = line.replaceAll("albumIDTag", albumID);
             line = line.replaceAll("albumNameTag", albumName);
@@ -104,7 +120,8 @@ public class AlbumMaker {
                 line = reader.readLine();
 
                 for (File photo : sourcePhotos) {
-                    writer.write(sb.toString().replaceAll("photoTag", photo.getName()));
+                    writer.write(sb.toString().replaceAll("photoTag",
+                            photo.getName()));
                 }
             }
             writer.write(line + "\n");
@@ -125,7 +142,9 @@ public class AlbumMaker {
         for (File photo : sourcePhotos) {
             File destinationFile = new File(thumbsDir, photo.getName());
             if (!destinationFile.exists()) {
-                String command = CONVERT + " \"" + photo.getAbsolutePath()
+                String command = CONVERT
+                        + " \""
+                        + photo.getAbsolutePath()
                         + "\" -resize 50x50^^ -gravity center -strip -quality 75 -extent 50x50 \""
                         + destinationFile.getAbsolutePath() + "\"";
                 runCommand(command);
@@ -140,7 +159,8 @@ public class AlbumMaker {
         for (File photo : sourcePhotos) {
             File mediumFile = new File(mediumDir, photo.getName());
             if (!mediumFile.exists()) {
-                String command = CONVERT + " \"" + photo.getAbsolutePath() + "\" -resize 600x400 \""
+                String command = CONVERT + " \"" + photo.getAbsolutePath()
+                        + "\" -resize 600x400 \""
                         + mediumFile.getAbsolutePath() + "\"";
                 runCommand(command);
                 waterMarkPhoto(mediumFile);
@@ -150,8 +170,10 @@ public class AlbumMaker {
 
     private void waterMarkPhoto(File photo) {
         File stampedFile = new File(photo.getAbsolutePath() + ".stamped.jpg");
-        String command = COMPOSITE + " -gravity south -geometry +0+10 -strip -quality 85 " + WATERMARK + " \""
-                + photo.getAbsolutePath() + "\" \"" + stampedFile.getAbsolutePath() + "\"";
+        String command = COMPOSITE
+                + " -gravity south -geometry +0+10 -strip -quality 85 "
+                + WATERMARK + " \"" + photo.getAbsolutePath() + "\" \""
+                + stampedFile.getAbsolutePath() + "\"";
         runCommand(command);
         String originalName = photo.getAbsolutePath();
         photo.delete();
@@ -170,8 +192,10 @@ public class AlbumMaker {
     }
 
     // If targetLocation does not exist, it will be created.
-    public void copyFile(File sourceLocation, File targetLocation) throws IOException {
-        if (sourceLocation.getName().equals(".svn") || sourceLocation.getName().equals("Thumbs.db")) {
+    public void copyFile(File sourceLocation, File targetLocation)
+            throws IOException {
+        if (sourceLocation.getName().equals(".svn")
+                || sourceLocation.getName().equals("Thumbs.db")) {
             return;
         }
 
@@ -182,11 +206,13 @@ public class AlbumMaker {
 
             String[] children = sourceLocation.list();
             for (int i = 0; i < children.length; i++) {
-                copyFile(new File(sourceLocation, children[i]), new File(targetLocation, children[i]));
+                copyFile(new File(sourceLocation, children[i]), new File(
+                        targetLocation, children[i]));
             }
         } else {
             if (targetLocation.isDirectory()) {
-                copyFile(sourceLocation, new File(targetLocation, sourceLocation.getName()));
+                copyFile(sourceLocation, new File(targetLocation,
+                        sourceLocation.getName()));
             } else {
                 InputStream in = new FileInputStream(sourceLocation);
                 OutputStream out = new FileOutputStream(targetLocation);
