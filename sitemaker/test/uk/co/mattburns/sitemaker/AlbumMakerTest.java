@@ -20,49 +20,49 @@ public class AlbumMakerTest {
                 "Ashley",
                 new File(
                         "C:/Documents and Settings/matt/My Documents/My Pictures/2010/2010_01_31_DVD_Ashley/edited"),
-                PricePlan.PORTRAIT);
+                PricePlan.PORTRAIT_2009);
         new AlbumMaker(
                 "grice",
                 "Grice",
                 new File(
                         "C:/Documents and Settings/matt/My Documents/My Pictures/2010/2010_01_24_export_2010_01_25"),
-                PricePlan.PORTRAIT);
+                PricePlan.PORTRAIT_2009);
         new AlbumMaker(
                 "grandad",
                 "Grandad",
                 new File(
                         "C:/Documents and Settings/matt/My Documents/My Pictures/2010/2010_01_15_export"),
-                PricePlan.PORTRAIT);
+                PricePlan.PORTRAIT_2009);
         new AlbumMaker(
                 "stleonards",
                 "Tony and Claire",
                 new File(
                         "C:/Documents and Settings/matt/My Documents/My Pictures/2009/2009_12_28_DVD_tonys_wedding/disc01/edited"),
-                PricePlan.PORTRAIT);
+                PricePlan.PORTRAIT_2009);
         new AlbumMaker(
                 "aidan313",
                 "Aidan's Baptism",
                 new File(
                         "C:/Documents and Settings/matt/My Documents/My Pictures/2010/2010-03-13_export"),
-                PricePlan.PORTRAIT);
+                PricePlan.PORTRAIT_2009);
         new AlbumMaker(
                 "sophie2010",
                 "Sophie's Baptism",
                 new File(
                         "C:/Documents and Settings/matt/My Documents/My Pictures/2010/2010-04-24_sophie_DVD/edited"),
-                PricePlan.PORTRAIT);
+                PricePlan.PORTRAIT_2009);
         new AlbumMaker(
                 "skatecal20103147940776278",
                 "Longboard Calendar",
                 new File(
                         "C:/Documents and Settings/matt/My Documents/My Pictures/2010/2010-05-30_export_gimped"),
-                PricePlan.PORTRAIT);
+                PricePlan.PORTRAIT_2009);
         new AlbumMaker(
                 "skatecalalt20103147940776278",
                 "Longboard Calendar alternatives",
                 new File(
                         "C:/Documents and Settings/matt/My Documents/My Pictures/2010/2010-05-30_alternatives"),
-                PricePlan.PORTRAIT);
+                PricePlan.PORTRAIT_2009);
         new AlbumMaker(
                 "kcps2010",
                 "Kings Court Leaving Prom",
@@ -74,25 +74,31 @@ public class AlbumMakerTest {
                 "Nosworthy",
                 new File(
                         "C:/Documents and Settings/matt/My Documents/My Pictures/2010/2010-08-14_export"),
-                PricePlan.PORTRAIT);
+                PricePlan.PORTRAIT_2009);
         new AlbumMaker(
                 "gould1931",
                 "Gould",
                 new File(
                         "C:/Documents and Settings/matt/My Documents/My Pictures/2010/2010-08-21_gould_export"),
-                PricePlan.PORTRAIT);
+                PricePlan.PORTRAIT_2009);
         new AlbumMaker(
                 "wood2225",
                 "Wood",
                 new File(
                         "C:/Documents and Settings/matt/My Documents/My Pictures/2010/2010-08-22_rhian_export"),
-                PricePlan.PORTRAIT);
+                PricePlan.PORTRAIT_2009);
         new AlbumMaker(
                 "hitchings1846",
                 "Mr and Mrs Hitchings",
                 new File(
                         "C:/Documents and Settings/matt/My Documents/My Pictures/2011/2011_09_04_hitchins_export"),
-                PricePlan.PORTRAIT);
+                PricePlan.PORTRAIT_2009);
+        new AlbumMaker(
+                "scannell85",
+                "Scannell",
+                new File(
+                        "C:/Documents and Settings/matt/My Documents/My Pictures/2011/2011_10_15_scannell_export"),
+                PricePlan.PORTRAIT_2009);
 
     }
 }
