@@ -1,0 +1,82 @@
+body {
+	background: #eee url('../images/bg01.jpg') no-repeat bottom;
+	background-attachment: fixed;
+	text-align: center;
+	font-family:Verdana,Helvetica,Arial,sans-serif;
+}
+
+#img.source-image {
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+h1 {
+	text-align: center;
+}
+
+h1 span {
+    color: #777;
+}
+
+h1, h2 {
+	font-family: Georgia, serif;
+	color: #333;
+}
+
+.wrapper {
+	margin:0 auto;
+	width:936px;
+	text-align: left;
+	background: #ffffff;
+	padding: 5px 0px;
+	opacity: 0.8;
+	border-radius: 20px;
+}
+
+.wrapper-contents {
+	margin: 25px;
+}
+
+.header {
+	margin: 20px 20px 0px 20px;
+	font-size: 1em;
+	font-style: italic;
+}
+
+.column {
+	width: 250px;
+	padding: 20px;
+	float: left;
+}
+
+.column ul {
+	padding: 0px;
+	margin: 0px;
+	list-style-type: square;
+	list-style-image: url(../images/bullet.png);
+}
+
+.column ul li a {
+	font-weight: bold;
+	color: #339;
+	text-decoration:none;
+}
+
+.column ul li a:hover {
+	color: #000;
+	text-decoration: underline;
+}
+
+.footer {
+	padding: 5px 0px 0px 0px;
+	text-align: right;
+	clear: both;
+	border-top: 1px solid #ccc;
+}
+
+.footer ul {
+	list-style: none;
+	margin: 0px;
+}
