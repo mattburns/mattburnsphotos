@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<title>Chief timelapse</title>
+<script type="text/javascript" src="javascript/jquery-1.4.1.min.js"></script>
+<style type="text/css">
+body {text-align: center;font-family:Verdana,Helvetica,Arial,sans-serif;}
+</style>
+
+<script language="JavaScript">
+$(document).ready(function(){
+	var oldX = 0;
+	var startNo = 165;
+	var endNo = 219;
+	var picNo = endNo;
+
+	// preload image sequence and hide while doing so
+	$("#theimg").hide();
+	while (picNo >= startNo) {
+		showImage(picNo);
+		picNo--;
+	}
+	$("#loading").hide();
+	$("#theimg").show();
+
+	$("html").mousemove(function(event) {
+		if (event.pageX > oldX) {
+			picNo++;
+		}
+		if (event.pageX < oldX) {
+			picNo--;
+		}
+		picNo = Math.min(picNo, endNo);
+		picNo = Math.max(picNo, startNo);
+		showImage(picNo);
+		oldX = event.pageX;
+	});
+	
+	function showImage(number) {
+		$("#theimg").attr("src", "images/timelapse/IMG_0"+ number + ".JPG");
+	}
+});
+
+</script>
+
+</head>
+
+
+<body>
+<h1>Silly Timelapse</h1>
+<p>55 photos taken pretty quickly for no real reason at all. Looks cooler than I thought it would though.</p>
+<p id="loading">Loading images...</p>
+<img id="theimg" />
+</body>
+</html>
