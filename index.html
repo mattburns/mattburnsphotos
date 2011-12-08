@@ -11,7 +11,7 @@
 		<script type="text/javascript" src="javascript/jquery-1.4.1.min.js"></script>
 		<script type="text/javascript" src="javascript/jquery.cross-slide.min.js"></script>
 		<style type="text/css">
-			#test3 {
+			#slide-show {
 				margin: 0px auto;
 				border: 15px solid #fff;
 				width: 830px;
@@ -38,61 +38,34 @@
 					</ul>
 				</div>
 				
-				<div id="test3">Loading…
+				<div id="slide-show">Loading…
 				</div>
 			</div>
 		</div>
 
 		<script type="text/javascript">
-jQuery(document).ready(function($) {
-$('#test3').crossSlide({
-  fade: 1
-}, [
-  {
-    src:  'images/0.jpg',
-    href: 'c/portfolio/index.html',
-    from: '0% 0% 1x',
-    to:   '0% 0% 1x',
-    time: 2
-  }, {
-    src:  'images/1.jpg',
-    href: 'c/portfolio/index.html',
-    from: '0% 0% 1x',
-    to:   '0% 0% 1x',
-    time: 2
-  }, {
-    src:  'images/2.jpg',
-    href: 'c/portfolio/index.html',
-    from: '0% 0% 1x',
-    to:   '0% 0% 1x',
-    time: 2
-  }, {
-    src:  'images/3.jpg',
-    href: 'c/portfolio/index.html',
-    from: '0% 0% 1x',
-    to:   '0% 0% 1x',
-    time: 2
-  }, {
-    src:  'images/4.jpg',
-    href: 'c/portfolio/index.html',
-    from: '0% 0% 1x',
-    to:   '0% 0% 1x',
-    time: 2
-  }, {
-    src:  'images/5.jpg',
-    href: 'c/portfolio/index.html',
-    from: '0% 0% 1x',
-    to:   '0% 0% 1x',
-    time: 2
-  }, {
-    src:  'images/6.jpg',
-    href: 'c/portfolio/index.html',
-    from: '0% 0% 1x',
-    to:   '0% 0% 1x',
-    time: 2
-  }
-]);
-});
+			jQuery(document).ready(function($) {
+				$('#slide-show').crossSlide({
+				  sleep: 2,
+				  fade: 1
+				}, [
+				  {
+					src:  'images/6.jpg'
+				  }, {
+					src:  'images/1.jpg'
+				  }, {
+					src:  'images/0.jpg'
+				  }, {
+					src:  'images/2.jpg'
+				  }, {
+					src:  'images/3.jpg'
+				  }, {
+					src:  'images/4.jpg'
+				  }, {
+					src:  'images/5.jpg'
+				  }
+				]);
+			});
 		</script>
 		<div id="footer">&copy; 2010 matt burns | design by <a href="mattburns.html">matt burns</a> and <a href="credits.html">friends</a></div>
 		<script type="text/javascript">
