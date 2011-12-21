@@ -99,6 +99,12 @@ public class AlbumMakerTest {
                 new File(
                         "C:/Documents and Settings/matt/My Documents/My Pictures/2011/2011_10_15_scannell_export"),
                 PricePlan.PORTRAIT_2009);
+        new AlbumMaker(
+                "parrotandbean",
+                "Ashley",
+                new File(
+                        "C:/Documents and Settings/matt/My Documents/My Pictures/2011/2011_12_15_parrot_export"),
+                PricePlan.PORTRAIT_2011);
 
     }
 }
