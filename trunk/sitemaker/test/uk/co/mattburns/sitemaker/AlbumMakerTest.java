@@ -105,6 +105,12 @@ public class AlbumMakerTest {
                 new File(
                         "C:/Documents and Settings/matt/My Documents/My Pictures/2011/2011_12_15_parrot_export"),
                 PricePlan.PORTRAIT_2011);
+        new AlbumMaker(
+                "jackson2011",
+                "Wass",
+                new File(
+                        "C:/Documents and Settings/matt/My Documents/My Pictures/2011/2011_12_20_jackson_export"),
+                PricePlan.PORTRAIT_2011);
 
     }
 }
