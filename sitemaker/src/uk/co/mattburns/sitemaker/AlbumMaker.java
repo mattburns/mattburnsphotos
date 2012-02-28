@@ -87,6 +87,7 @@ public class AlbumMaker {
         makeHtml(albumID, albumName, albumDir, sourcePhotos, pricePlan);
         makeThumbs(albumDir, sourcePhotos);
         makeMediumPhotos(albumDir, sourcePhotos);
+        makeLargePhotos(albumDir, sourcePhotos);
 
         System.out.println("Finished " + albumName + " album :)");
     }
@@ -161,6 +162,22 @@ public class AlbumMaker {
             if (!mediumFile.exists()) {
                 String command = CONVERT + " \"" + photo.getAbsolutePath()
                         + "\" -resize 600x400 \""
+                        + mediumFile.getAbsolutePath() + "\"";
+                runCommand(command);
+                waterMarkPhoto(mediumFile);
+            }
+        }
+    }
+
+    private void makeLargePhotos(File albumDir, List<File> sourcePhotos) {
+        File mediumDir = new File(albumDir, "large");
+        mediumDir.mkdirs();
+
+        for (File photo : sourcePhotos) {
+            File mediumFile = new File(mediumDir, photo.getName());
+            if (!mediumFile.exists()) {
+                String command = CONVERT + " \"" + photo.getAbsolutePath()
+                        + "\" -resize 1024x1024 \""
                         + mediumFile.getAbsolutePath() + "\"";
                 runCommand(command);
                 waterMarkPhoto(mediumFile);
