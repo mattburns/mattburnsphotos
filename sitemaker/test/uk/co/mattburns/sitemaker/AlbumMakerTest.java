@@ -111,6 +111,12 @@ public class AlbumMakerTest {
                 new File(
                         "C:/Documents and Settings/matt/My Documents/My Pictures/2011/2011_12_20_jackson_export"),
                 PricePlan.PORTRAIT_2011);
+        new AlbumMaker(
+                "isabel2012",
+                "Isabel's Christening",
+                new File(
+                        "C:/Documents and Settings/matt/My Documents/My Pictures/2012/2012_01_29_isabel_export"),
+                PricePlan.PORTRAIT_2011);
 
     }
 }
