@@ -29,6 +29,8 @@ public class AlbumMaker {
             "C:/svnrepos/mattburnsphotos/css");
     private static final File TEMPLATE_HTML = new File(
             "C:/svnrepos/mattburnsphotos/sitemaker/templates/album.html");
+    private static final File MOBILE_TEMPLATE_HTML = new File(
+            "C:/svnrepos/mattburnsphotos/sitemaker/templates/mobile.html");
     private static final File HOME_HTML = new File(
             "C:/svnrepos/mattburnsphotos/index.html");
     private static final File CONTACT_HTML = new File(
@@ -88,7 +90,16 @@ public class AlbumMaker {
             }
         }
 
-        makeHtml(albumID, albumName, albumDir, sourcePhotos, pricePlan);
+        // make album
+        File destination = new File(albumDir, "index.html");
+        makeHtml(albumID, albumName, albumDir, sourcePhotos, pricePlan,
+                TEMPLATE_HTML, destination);
+
+        // make mobile album
+        destination = new File(albumDir, "mobile.html");
+        makeHtml(albumID, albumName, albumDir, sourcePhotos, pricePlan,
+                MOBILE_TEMPLATE_HTML, destination);
+
         makeThumbs(albumDir, sourcePhotos);
         makePhotos(albumDir, sourcePhotos, PhotoSize.medium, true, true);
         makePhotos(albumDir, sourcePhotos, PhotoSize.large, true, true);
@@ -97,10 +108,10 @@ public class AlbumMaker {
     }
 
     private void makeHtml(String albumID, String albumName, File albumDir,
-            List<File> sourcePhotos, PricePlan pricePlan) throws IOException {
-        BufferedReader reader = new BufferedReader(
-                new FileReader(TEMPLATE_HTML));
-        FileWriter writer = new FileWriter(new File(albumDir, "index.html"));
+            List<File> sourcePhotos, PricePlan pricePlan, File template,
+            File destination) throws IOException {
+        BufferedReader reader = new BufferedReader(new FileReader(template));
+        FileWriter writer = new FileWriter(destination);
 
         String line = reader.readLine();
         while (line != null) {
