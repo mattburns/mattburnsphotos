@@ -1,8 +1,8 @@
 div.content {
 	/* The display of content is enabled using jQuery so that the slideshow content won't display unless javascript is enabled. */
 	display: none;
-	float: right;
-	width: 650px; 
+	float: left;
+	width: 880px; 
 }
 div.content a, div.navigation a {
 	text-decoration: none;
@@ -15,7 +15,7 @@ div.content a:focus, div.content a:hover, div.content a:active {
 div.controls {
 	margin-top: 5px;
 	height: 23px;
-	padding: 0px 20px 5px 20px;
+	padding: 5px 18px 5px 3px;
 }
 div.controls a {
 	padding: 5px;
@@ -29,7 +29,7 @@ div.nav-controls {
 div.slideshow-container {
 	position: relative;
 	clear: both;
-	height: 430px; /* This should be set to be at least the height of the largest image in the slideshow + (border x 2) */
+	height: 583px; /* This should be set to be at least the height of the largest image in the slideshow + (border x 2) */
 }
 div.loader {
 	position: absolute;
@@ -38,8 +38,8 @@ div.loader {
 	background-image: url('loader.gif');
 	background-repeat: no-repeat;
 	background-position: center;
-	width: 650px;
-	height: 430px; /* This should be set to be at least the height of the largest image in the slideshow + (border x 2) */
+	width: 880px;
+	height: 583px; /* This should be set to be at least the height of the largest image in the slideshow + (border x 2) */
 }
 div.slideshow {
 
@@ -48,13 +48,13 @@ div.slideshow span.image-wrapper {
 	display: block;
 	position: absolute;
 	top: 0;
-	left: 0;
+	left: -10px;
 }
 div.slideshow a.advance-link {
 	display: block;
-	height: 430px; /* This should be set to be at least the height of the largest image in the slideshow + (border x 2) */
-	width: 650px;
-	line-height: 430px; /* This should be set to be at least the height of the largest image in the slideshow + (border x 2) */
+	height: 583px; /* This should be set to be at least the height of the largest image in the slideshow + (border x 2) */
+	width: 880px;
+	line-height: 583px; /* This should be set to be at least the height of the largest image in the slideshow + (border x 2) */
 	text-align: center;
 }
 div.slideshow a.advance-link:hover, div.slideshow a.advance-link:active, div.slideshow a.advance-link:visited {
@@ -74,7 +74,7 @@ div.caption-container {
 span.image-caption {
 	display: block;
 	position: absolute;
-	width: 650px;
+	width: 880px;
 	top: 0;
 	left: 0;
 }
@@ -93,7 +93,7 @@ div.navigation {
 	/* The navigation style is set using jQuery so that the javascript specific styles won't be applied unless javascript is enabled. */
 }
 #thumbs {
-	padding: 28px 0px 0px 0px;
+	padding: 28px 0px 0px 3px;
 }
 ul.thumbs {
 	clear: both;
@@ -103,7 +103,7 @@ ul.thumbs {
 ul.thumbs li {
 	float: left;
 	padding: 0;
-	margin: 5px 10px 5px 0;
+	margin: 5px 19px 5px 0;
 	list-style: none;
 }
 a.thumb {

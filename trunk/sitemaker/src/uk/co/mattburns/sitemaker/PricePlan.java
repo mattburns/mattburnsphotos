@@ -28,6 +28,8 @@ public enum PricePlan {
             "30x20");
     private final Product thirtyByTwenty2011 = new Product("90.00",
             "30\"x20\"", "30x20");
+    private final Product thirtyByTwentyFramed2011 = new Product("140.00",
+            "30\"x20\" framed", "30x20f");
     private final Product dvd50Quid = new Product("50.00",
             "albumNameTag album on DVD", "albumNameTag album on DVD");
     private final Product dvd100Quid = new Product("100.00",
@@ -95,6 +97,7 @@ public enum PricePlan {
                 products.add(fifteenByTen2011);
                 products.add(eightBySixFramed2011);
                 products.add(thirtyByTwenty2011);
+                products.add(thirtyByTwentyFramed2011);
                 products.add(dvd100Quid);
                 break;
             case SCHOOL:

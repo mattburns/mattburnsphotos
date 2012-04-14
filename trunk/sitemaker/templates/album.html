@@ -57,7 +57,7 @@
 					<ul class="thumbs noscript">
 						<!--photo repeat start-->
 						<li>
-							<a class="thumb" name="photoTag" href="medium/photoTag" title="photoTag">
+							<a class="thumb" name="photoTag" href="large/photoTag" title="photoTag">
 								<img src="thumbs/photoTag" alt="photoTag" />
 							</a>
 						</li>
@@ -66,7 +66,7 @@
 				</div>
 				<div style="clear: both;" ></div>
 				<!--album-only start-->
-				<table cellpadding="5" cellspacing="0" width="100%">
+				<table cellpadding="0" cellspacing="0" width="100%">
 					<tr>
 						<td align="right" width="100%">
 							<div class="product">
@@ -90,8 +90,11 @@
 		<script type="text/javascript">
 			jQuery(document).ready(function($) {
 				// We only want these styles applied when javascript is enabled
-				$('div.navigation').css({'width' : '200px', 'float' : 'left'});
+				$('div.navigation').css({'width' : '880px', 'float' : 'left'});
 				$('div.content').css('display', 'block');
+				
+				// if showing a gallery, make page a bit taller to fit nav thumbs in
+				$('div#container').css('height', '875px');
 
 				// Initially set opacity on thumbs and add
 				// additional styling for hover effect on thumbs
@@ -106,7 +109,7 @@
 				// Initialize Advanced Galleriffic Gallery
 				var gallery = $('#thumbs').galleriffic({
 					delay:                     3500,
-					numThumbs:                 18,
+					numThumbs:                 12,
 					preloadAhead:              4,
 					enableTopPager:            true,
 					enableBottomPager:         true,
@@ -124,7 +127,7 @@
 					nextPageLinkText:          'next &rsaquo;',
 					prevPageLinkText:          '&lsaquo; prev',
 					enableHistory:             true,
-					autoStart:                 false,
+					autoStart:                 true,
 					syncTransitions:           true,
 					defaultTransitionDuration: 1000,
 					onSlideChange:             function(prevIndex, nextIndex) {
