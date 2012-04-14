@@ -19,7 +19,7 @@ public class AlbumMaker {
     private static final String WATERMARK = "\"C:\\svnrepos\\mattburnsphotos\\images\\watermark.png\"";
     private static final String CONVERT = "\"" + IMAGEMAGICK + "convert\"";
     private static final String COMPOSITE = "\"" + IMAGEMAGICK + "composite\"";
-    private static final File GENERATED_DIR = new File(
+    public static final File GENERATED_DIR = new File(
             "C:/svnrepos/mattburnsphotos/generated");
     private static final File IMAGES_DIR = new File(
             "C:/svnrepos/mattburnsphotos/images");
@@ -55,6 +55,10 @@ public class AlbumMaker {
                 PricePlan.PORTRAIT_2009);
     }
 
+    public AlbumMaker() {
+
+    }
+
     public AlbumMaker(String albumID, String albumName,
             File photoSourceDirectory, PricePlan pricePlan) throws IOException {
         if (!photoSourceDirectory.exists()) {
@@ -86,8 +90,8 @@ public class AlbumMaker {
 
         makeHtml(albumID, albumName, albumDir, sourcePhotos, pricePlan);
         makeThumbs(albumDir, sourcePhotos);
-        makeMediumPhotos(albumDir, sourcePhotos);
-        makeLargePhotos(albumDir, sourcePhotos);
+        makePhotos(albumDir, sourcePhotos, PhotoSize.medium, true, true);
+        makePhotos(albumDir, sourcePhotos, PhotoSize.large, true, true);
 
         System.out.println("Finished " + albumName + " album :)");
     }
@@ -153,34 +157,23 @@ public class AlbumMaker {
         }
     }
 
-    private void makeMediumPhotos(File albumDir, List<File> sourcePhotos) {
-        File mediumDir = new File(albumDir, "medium");
-        mediumDir.mkdirs();
-
-        for (File photo : sourcePhotos) {
-            File mediumFile = new File(mediumDir, photo.getName());
-            if (!mediumFile.exists()) {
-                String command = CONVERT + " \"" + photo.getAbsolutePath()
-                        + "\" -resize 600x400 \""
-                        + mediumFile.getAbsolutePath() + "\"";
-                runCommand(command);
-                waterMarkPhoto(mediumFile);
-            }
+    public void makePhotos(File albumDir, List<File> sourcePhotos,
+            PhotoSize size, boolean putInSubfolder, boolean addWatermark) {
+        if (putInSubfolder) {
+            albumDir = new File(albumDir, size.toString());
+            albumDir.mkdirs();
         }
-    }
-
-    private void makeLargePhotos(File albumDir, List<File> sourcePhotos) {
-        File mediumDir = new File(albumDir, "large");
-        mediumDir.mkdirs();
 
         for (File photo : sourcePhotos) {
-            File mediumFile = new File(mediumDir, photo.getName());
-            if (!mediumFile.exists()) {
+            File file = new File(albumDir, photo.getName());
+            if (!file.exists()) {
                 String command = CONVERT + " \"" + photo.getAbsolutePath()
-                        + "\" -resize 1024x1024 \""
-                        + mediumFile.getAbsolutePath() + "\"";
+                        + "\" -resize " + size.width + "x" + size.height
+                        + " \"" + file.getAbsolutePath() + "\"";
                 runCommand(command);
-                waterMarkPhoto(mediumFile);
+                if (addWatermark) {
+                    waterMarkPhoto(file);
+                }
             }
         }
     }
@@ -243,6 +236,17 @@ public class AlbumMaker {
                 in.close();
                 out.close();
             }
+        }
+    }
+
+    public enum PhotoSize {
+        medium(600, 400), large(830, 553);
+        public int width;
+        public int height;
+
+        private PhotoSize(int width, int height) {
+            this.width = width;
+            this.height = height;
         }
     }
 }
