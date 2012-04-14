@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>mattburnsphotos | albumNameTag</title>
+	<meta name="author" content="Matt Burns - www.mattburnsphotos.com" />
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	
+	<link href="../../css/mobilestyle.css" type="text/css" rel="stylesheet" />
+	<link href="../../css/photoswipe.css" type="text/css" rel="stylesheet" />
+	
+	<script type="text/javascript" src="../../javascript/klass.min.js"></script>
+	<script type="text/javascript" src="../../javascript/code.photoswipe-3.0.4.min.js"></script>
+	
+	
+	<script type="text/javascript">
+
+		(function(window, PhotoSwipe){
+		
+			document.addEventListener('DOMContentLoaded', function(){
+			
+				var
+					options = {'imageScaleMethod': 'fitNoUpscale'},
+					instance = PhotoSwipe.attach( window.document.querySelectorAll('#Gallery a'), options );
+			
+			}, false);
+			
+			
+		}(window, window.Code.PhotoSwipe));
+		
+	</script>
+	
+</head>
+<body>
+
+<div id="Header">
+	<a href="index.html?noRedirect=true"><img src="../../images/mattburnsphotos.jpg" width="250" height="40" alt="Matt Burns Photos" /></a>
+</div>
+
+<div id="MainContent">
+
+	<div class="page-content">
+		<h1>albumNameTag</h1>
+	</div>
+	
+	<ul id="Gallery" class="gallery">
+		<!--photo repeat start-->
+		<li>
+			<a class="thumb" name="photoTag" href="large/photoTag" title="photoTag">
+				<img src="thumbs/photoTag" alt="photoTag" />
+			</a>
+		</li>
+		<!--photo repeat stop-->
+	</ul>
+	
+</div>	
+
+	
+<div id="Footer">
+	<p><small><a href="index.html?noRedirect=true">desktop</a> | mobile</small></p>
+	<p><small>&copy; 2012 matt burns | design by <a href="../../mattburns.html">matt burns</a> and <a href="../../credits.html">friends</a></small></p>
+</div>
+
+</body>
+</html>

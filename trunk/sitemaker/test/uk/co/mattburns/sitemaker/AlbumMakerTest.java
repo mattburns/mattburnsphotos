@@ -43,34 +43,37 @@ public class AlbumMakerTest {
                 "Longboard Calendar alternatives", new File(
                         "C:/photos/matts/2010/2010-05-30_alternatives"),
                 PricePlan.PORTRAIT_2009);
-        // new AlbumMaker("kcps2010", "Kings Court Leaving Prom", new File(
-        // "C:/photos/matts/2010/2010-07-15_export"), PricePlan.SCHOOL);
-        // new AlbumMaker("nos1931", "Nosworthy", new File(
-        // "C:/photos/matts/2010/2010-08-14_export"),
-        // PricePlan.PORTRAIT_2009);
-        // new AlbumMaker("gould1931", "Gould", new File(
-        // "C:/photos/matts/2010/2010-08-21_gould_export"),
-        // PricePlan.PORTRAIT_2009);
-        // new AlbumMaker("wood2225", "Wood", new File(
-        // "C:/photos/matts/2010/2010-08-22_rhian_export"),
-        // PricePlan.PORTRAIT_2009);
-        // new AlbumMaker("hitchings1846", "Mr and Mrs Hitchings", new File(
-        // "C:/photos/matts/2011/2011_09_04_hitchins_export"),
-        // PricePlan.PORTRAIT_2009);
-        // new AlbumMaker("scannell85", "Scannell", new File(
-        // "C:/photos/matts/2011/2011_10_15_scannell_export"),
-        // PricePlan.PORTRAIT_2009);
-        // new AlbumMaker("parrotandbean", "Ashley", new File(
-        // "C:/photos/matts/2011/2011_12_15_parrot_export"),
-        // PricePlan.PORTRAIT_2011);
-        // new AlbumMaker("jackson2011", "Wass", new File(
-        // "C:/photos/matts/2011/2011_12_20_jackson_export"),
-        // PricePlan.PORTRAIT_2011);
-        // new AlbumMaker("isabel2012", "Isabel's Christening", new File(
-        // "C:/photos/matts/2012/2012_01_29_isabel_export"),
-        // PricePlan.PORTRAIT_2011);
+        new AlbumMaker("kcps2010", "Kings Court Leaving Prom", new File(
+                "C:/photos/matts/2010/2010-07-15_export"), PricePlan.SCHOOL);
+        new AlbumMaker("nos1931", "Nosworthy", new File(
+                "C:/photos/matts/2010/2010-08-14_export"),
+                PricePlan.PORTRAIT_2009);
+        new AlbumMaker("gould1931", "Gould", new File(
+                "C:/photos/matts/2010/2010-08-21_gould_export"),
+                PricePlan.PORTRAIT_2009);
+        new AlbumMaker("wood2225", "Wood", new File(
+                "C:/photos/matts/2010/2010-08-22_rhian_export"),
+                PricePlan.PORTRAIT_2009);
+        new AlbumMaker("hitchings1846", "Mr and Mrs Hitchings", new File(
+                "C:/photos/matts/2011/2011_09_04_hitchins_export"),
+                PricePlan.PORTRAIT_2009);
+        new AlbumMaker("scannell85", "Scannell", new File(
+                "C:/photos/matts/2011/2011_10_15_scannell_export"),
+                PricePlan.PORTRAIT_2009);
+        new AlbumMaker("parrotandbean", "Ashley", new File(
+                "C:/photos/matts/2011/2011_12_15_parrot_export"),
+                PricePlan.PORTRAIT_2011);
+        new AlbumMaker("jackson2011", "Wass", new File(
+                "C:/photos/matts/2011/2011_12_20_jackson_export"),
+                PricePlan.PORTRAIT_2011);
+        new AlbumMaker("isabel2012", "Isabel's Christening", new File(
+                "C:/photos/matts/2012/2012_01_29_isabel_export"),
+                PricePlan.PORTRAIT_2011);
         new AlbumMaker("luke2012", "Luke", new File(
                 "C:/photos/matts/2012/2012_02_11_luke_export"),
+                PricePlan.PORTRAIT_2011);
+        new AlbumMaker("emilie2012", "Emilie", new File(
+                "C:/photos/matts/2012/2012_04_13_emilie_export"),
                 PricePlan.PORTRAIT_2011);
 
         AlbumMaker am = new AlbumMaker();

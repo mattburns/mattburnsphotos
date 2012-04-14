@@ -100,11 +100,16 @@ ul.menu li, #googlecart-widget-control, .googlecart-add {
 	list-style: none;
 }
 
-ul.menu li a , #golink, #googlecart-widget-control, .googlecart-add {
+ul.menu li a , #golink, .googlecart-add, .white-link {
+	padding: 5px 5px 5px 5px;
+}
+
+#googlecart-widget-control {
 	padding: 0px 5px 5px 5px;
 }
 
-ul.menu:hover li:hover a:hover, #golink:hover, #googlecart-widget-control:hover, .googlecart-add:hover {
+ul.menu:hover li:hover a:hover, #golink:hover, #googlecart-widget-control:hover, .googlecart-add:hover , .white-link:hover {
+	text-decoration: none;
 	background-color: #eee;
 }
 .menuselected {
