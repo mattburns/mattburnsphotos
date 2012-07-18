@@ -33,6 +33,8 @@ public class AlbumMaker {
             "C:/svnrepos/mattburnsphotos/sitemaker/templates/mobile.html");
     private static final File HOME_HTML = new File(
             "C:/svnrepos/mattburnsphotos/index.html");
+    private static final File MBP_HTML = new File(
+            "C:/svnrepos/mattburnsphotos/mbp.html");
     private static final File CONTACT_HTML = new File(
             "C:/svnrepos/mattburnsphotos/contact.html");
     private static final File CREDITS_HTML = new File(
@@ -72,6 +74,7 @@ public class AlbumMaker {
         copyFile(IMAGES_DIR, new File(GENERATED_DIR, "images"));
         copyFile(JAVASCRIPT_DIR, new File(GENERATED_DIR, "javascript"));
         copyFile(HOME_HTML, GENERATED_DIR);
+        copyFile(MBP_HTML, GENERATED_DIR);
         copyFile(CONTACT_HTML, GENERATED_DIR);
         copyFile(PRICES_HTML, GENERATED_DIR);
         copyFile(CLIENTS_HTML, GENERATED_DIR);
