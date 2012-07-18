@@ -25,9 +25,13 @@ h1, h2 {
 	color: #333;
 }
 
+img {
+	border: 0px;
+}
+
 .wrapper {
 	margin:0 auto;
-	width:936px;
+	max-width:936px;
 	text-align: left;
 	background: #ffffff;
 	padding: 5px 0px;
@@ -39,34 +43,40 @@ h1, h2 {
 	margin: 25px;
 }
 
-.header {
-	margin: 20px 20px 0px 20px;
-	font-size: 1em;
-	font-style: italic;
-}
-
 .column {
 	width: 250px;
 	padding: 20px;
 	float: left;
+	border-top: 1px solid #ccc;
+}
+
+.header-icons.column {
+	width: 540px;
 }
 
 .column ul {
 	padding: 0px;
 	margin: 0px;
-	list-style-type: square;
-	list-style-image: url(../images/bullet.png);
+	list-style-type: none;
 }
 
 .column ul li a {
 	font-weight: bold;
-	color: #339;
+	color: #338;
 	text-decoration:none;
 }
 
 .column ul li a:hover {
 	color: #000;
 	text-decoration: underline;
+}
+
+.header-icons.column a:hover {
+	background-color: #eef;
+}
+
+.header-intro {
+	text-align: right;
 }
 
 .footer {

@@ -1,82 +1,92 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/DTD/strict.dtd">
-<html>
-	<head>
-		<meta http-equiv="Content-type" content="text/html; charset=utf-8">
-		<meta name="description" content="Matt Burns Photos. Original and contemporary photography in Bristol, UK."/> 
-		<meta name="keywords" content="photography, matt burns, bristol, portraiture, software"/> 
-		<title>mattburnsphotos</title>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<title>matt burns - home</title>
+<meta name="Home" content="The homepage of Matt Burns. Simply a dumping ground of links to fings wot I hav dun. Photos, feeds and software projects to save the world.">
+<link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+<script type="text/javascript" src="javascript/jquery-1.4.1.min.js"></script>
 
-		<link rel="stylesheet" href="css/basic.css" type="text/css" />
-		<link rel="stylesheet" href="css/galleriffic-2.css" type="text/css" />
-		<script type="text/javascript" src="javascript/jquery-1.4.1.min.js"></script>
-		<script type="text/javascript" src="javascript/jquery.cross-slide.min.js"></script>
-		<style type="text/css">
-			#slide-show {
-				margin: 0px auto;
-				border: 15px solid #fff;
-				width: 829px;
-				height: 553px;
-				margin-top: 50px;
-			}
-		</style>
-	</head>
-	<body>
-		<div id="page">
-			<div id="container">
-				<div>
-					<a href="index.html"><span class="headera">matt</span><span class="headerb">burns</span><span class="headera">photos</span></a>
-					<ul class="menu">
-						<li><a href="contact.html">contact</a></li>
-						<li>|</li>
-						<li><a href="clients.html">clients</a></li>
-						<li>|</li>
-						<li><a href="prices.html">prices</a></li>
-						<li>|</li>
-						<li><a href="c/portfolio/index.html">portfolio</a></li>
-						<li>|</li>
-						<li><a class="menuselected" href="index.html">home</a></li>
-					</ul>
-				</div>
-				
-				<div id="slide-show">Loading…
-				</div>
-			</div>
-		</div>
+<script language="JavaScript">
+  $(document).ready(function(){
+	bgImageTotal=9;
+	randomNumber = Math.round(Math.random()*(bgImageTotal-1))+1;
+	imgPath=('images/bg0'+randomNumber+'.jpg');
+	$('body').css('background-image', ('url("'+imgPath+'")'));
+  });
+</script>
 
-		<script type="text/javascript">
-			jQuery(document).ready(function($) {
-				$('#slide-show').crossSlide({
-				  sleep: 2,
-				  fade: 1
-				}, [
-				  {
-					src:  'images/6.jpg'
-				  }, {
-					src:  'images/1.jpg'
-				  }, {
-					src:  'images/0.jpg'
-				  }, {
-					src:  'images/2.jpg'
-				  }, {
-					src:  'images/3.jpg'
-				  }, {
-					src:  'images/4.jpg'
-				  }, {
-					src:  'images/5.jpg'
-				  }
-				]);
-			});
-		</script>
-		<div id="footer">&copy; 2012 matt burns | design by <a href="mattburns.html">matt burns</a> and <a href="credits.html">friends</a></div>
-		<script type="text/javascript">
-			var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-			document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-		</script>
-		<script type="text/javascript">
-			try {
-				var pageTracker = _gat._getTracker("UA-3929681-1");
-				pageTracker._trackPageview();
-			} catch(err) {}
-		</script>
-	</body>
+</head>
+
+
+<body">
+	
+<div class="wrapper">
+<div class="wrapper-contents">
+
+<h1>matt<span>burns</span></h1>
+
+<div class="header-intro column">
+<p>I'm <del>responsible</del> liable for a smattering of nonsense on the internet, but these are the parts I'm most proud of &rarr;</p>
+</div>
+<div class="header-icons column">
+<p><a href="http://www.stolencamerafinder.com"><img src="images/logo-stolencamerafinder.png" title="stolencamerafinder logo" alt="stolencamerafinder uses the serial number stored in your photo to search the web for photos taken with the same camera." /></a></p>
+<p><a href="http://www.oddprints.com"><img src="images/logo-oddprints.png" title="OddPrints logo" alt="Easy printing for tricky frames." /></a></p>
+<p><a href="http://www.mattburnsphotos.com"><img src="images/logo-mattburnsphotos.png" title="Matt Burns Photos logo" alt="Professional photo site for weddings and portraits." /></a></p>
+</div>
+
+<div class="column">
+<h2>Photography</h2>
+<ul>
+<li><a href="http://www.mattburns.co.uk/mbp.html">Matt Burns Photos</a> - My professional portfolio and the place to go if you want to hire me.</li>
+<li><a href="http://www.flickr.com/photos/floater81/">Flickr</a> - A constant stream of my snaps.</li>
+</ul>
+</div>
+
+<div class="column">
+<h2>Software</h2>
+<ul>
+<li><a href="http://www.stolencamerafinder.com">Stolen Camera Finder</a> - My growing database of the world's digital cameras.
+Making stolen cameras less valuable.</li>
+<li><a href="http://www.oddprints.com">OddPrints</a> - Easy printing for tricky frames.</li>
+<li><a href="http://code.google.com/p/gwtstationmodel/">GWTStationModel</a> - A widget for displaying dynamic Station Models using GWT or simply plain javascript.</li>
+<li><a href="http://code.google.com/p/screenwaker/">Screenwaker</a> - This powersaving app will turn your monitor on only if a webpage has something you want to see.</li>
+</ul>
+</div>
+
+<div class="column">
+<h2>Me</h2>
+<ul>
+<li><a href="http://www.mattburns.co.uk/blog">Blog</a></li>
+<li><a href="http://www.mattburns.co.uk/travels">Travel Blog</a> - Primarily penned by Karen ;)</li>
+<li><a href="http://www.twitter.com/mattburns_uk">Twitter</a></li>
+<li><a href="http://www.facebook.com/mattburns.co.uk">Facebook</a></li>
+<li><a href="http://www.youtube.com/user/mattburnsuk">YouTube</a></li>
+<li><a href="http://www.endomondo.com/profile/218757">Endomondo</a> - Running log.</li>
+<li><a href="https://github.com/mattburns/">GitHub</a></li>
+</ul>
+</div>
+
+<div class="footer">
+<ul>
+<li>matt@mattburns.co.uk</li>
+<li>+44 7762 784444</li>
+</ul>
+</div>
+
+</div>
+</div>
+
+<script type="text/javascript">
+	var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+	document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+	try {
+		var pageTracker = _gat._getTracker("UA-3929681-1");
+		pageTracker._trackPageview();
+	} catch(err) {}
+</script>
+	
+</body>
 </html>
