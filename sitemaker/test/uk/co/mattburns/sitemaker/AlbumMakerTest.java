@@ -57,24 +57,24 @@ public class AlbumMakerTest {
         // new AlbumMaker("hitchings1846", "Mr and Mrs Hitchings", new File(
         // "C:/photos/matts/2011/2011_09_04_hitchins_export"),
         // PricePlan.PORTRAIT_2009);
-        // new AlbumMaker("scannell85", "Scannell", new File(
-        // "C:/photos/matts/2011/2011_10_15_scannell_export"),
-        // PricePlan.PORTRAIT_2009);
-        // new AlbumMaker("parrotandbean", "Ashley", new File(
-        // "C:/photos/matts/2011/2011_12_15_parrot_export"),
-        // PricePlan.PORTRAIT_2011);
-        // new AlbumMaker("jackson2011", "Wass", new File(
-        // "C:/photos/matts/2011/2011_12_20_jackson_export"),
-        // PricePlan.PORTRAIT_2011);
-        // new AlbumMaker("isabel2012", "Isabel's Christening", new File(
-        // "C:/photos/matts/2012/2012_01_29_isabel_export"),
-        // PricePlan.PORTRAIT_2011);
-        // new AlbumMaker("luke2012", "Luke", new File(
-        // "C:/photos/matts/2012/2012_02_11_luke_export"),
-        // PricePlan.PORTRAIT_2011);
-        // new AlbumMaker("emilie2012", "Emilie", new File(
-        // "C:/photos/matts/2012/2012_04_13_emilie_export"),
-        // PricePlan.PORTRAIT_2011);
+        new AlbumMaker("scannell85", "Scannell", new File(
+                "C:/photos/matts/2011/2011_10_15_scannell_export"),
+                PricePlan.PORTRAIT_2009);
+        new AlbumMaker("parrotandbean", "Ashley", new File(
+                "C:/photos/matts/2011/2011_12_15_parrot_export"),
+                PricePlan.PORTRAIT_2011);
+        new AlbumMaker("jackson2011", "Wass", new File(
+                "C:/photos/matts/2011/2011_12_20_jackson_export"),
+                PricePlan.PORTRAIT_2011);
+        new AlbumMaker("isabel2012", "Isabel's Christening", new File(
+                "C:/photos/matts/2012/2012_01_29_isabel_export"),
+                PricePlan.PORTRAIT_2011);
+        new AlbumMaker("luke2012", "Luke", new File(
+                "C:/photos/matts/2012/2012_02_11_luke_export"),
+                PricePlan.PORTRAIT_2011);
+        new AlbumMaker("emilie2012", "Emilie", new File(
+                "C:/photos/matts/2012/2012_04_13_emilie_export"),
+                PricePlan.PORTRAIT_2011);
 
         AlbumMaker am = new AlbumMaker();
         File homepagePhotosDir = new File("C:/photos/matts/website_homepage");

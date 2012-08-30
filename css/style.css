@@ -71,8 +71,8 @@ img {
 	text-decoration: underline;
 }
 
-.header-icons.column a:hover {
-	background-color: #eef;
+.header-icons.column img:hover {
+	background-color: #dde;
 }
 
 .header-intro {
